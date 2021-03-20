@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="9" total="45" passed="29" failed="7" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-26T15:07:56 IST" name="Suite" finished-at="2021-01-26T15:09:14 IST" duration-ms="78034">
+    <groups>
+      <group name="smoke">
+        <method signature="Day_4.test_1()[pri:0, instance:TestNG.Day_4@33990a0c]" name="test_1" class="TestNG.Day_4"/>
+        <method signature="Day_4.test_3()[pri:0, instance:TestNG.Day_4@33990a0c]" name="test_3" class="TestNG.Day_4"/>
+        <method signature="Day_4.test_4()[pri:0, instance:TestNG.Day_4@33990a0c]" name="test_4" class="TestNG.Day_4"/>
+        <method signature="Day_4.test_1()[pri:0, instance:TestNG.Day_4@437da279]" name="test_1" class="TestNG.Day_4"/>
+        <method signature="Day_4.test_3()[pri:0, instance:TestNG.Day_4@437da279]" name="test_3" class="TestNG.Day_4"/>
+        <method signature="Day_4.test_4()[pri:0, instance:TestNG.Day_4@437da279]" name="test_4" class="TestNG.Day_4"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2021-01-26T15:07:56 IST" name="Test" finished-at="2021-01-26T15:07:56 IST" duration-ms="232">
+      <class name="TestNG.Day_4">
+        <test-method signature="test_1()[pri:0, instance:TestNG.Day_4@33990a0c]" started-at="2021-01-26T15:07:56 IST" name="test_1" finished-at="2021-01-26T15:07:56 IST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+        <test-method signature="test_3()[pri:0, instance:TestNG.Day_4@33990a0c]" started-at="2021-01-26T15:07:56 IST" name="test_3" finished-at="2021-01-26T15:07:56 IST" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_3 -->
+        <test-method signature="test_4()[pri:0, instance:TestNG.Day_4@33990a0c]" started-at="2021-01-26T15:07:56 IST" name="test_4" finished-at="2021-01-26T15:07:56 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_4 -->
+      </class> <!-- TestNG.Day_4 -->
+      <class name="TestNG.Day_1">
+        <test-method signature="loan()[pri:0, instance:TestNG.Day_1@15aab8c6]" started-at="2021-01-26T15:07:56 IST" name="loan" finished-at="2021-01-26T15:07:56 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loan -->
+      </class> <!-- TestNG.Day_1 -->
+    </test> <!-- Test -->
+    <test started-at="2021-01-26T15:07:56 IST" name="run_package" finished-at="2021-01-26T15:09:14 IST" duration-ms="78034">
+      <class name="TestNG.Parameters">
+        <test-method signature="start(java.lang.String, java.lang.String)[pri:1, instance:TestNG.Parameters@49049a04]" started-at="2021-01-26T15:09:06 IST" name="start" finished-at="2021-01-26T15:09:06 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'emailID' is required by @Test on method start but has not been marked @Optional or defined
+in C:\Users\Lenovo\eclipse-workspace\TestNG\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'emailID' is required by @Test on method start but has not been marked @Optional or defined
+in C:\Users\Lenovo\eclipse-workspace\TestNG\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:268)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:875)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="close()[pri:2, instance:TestNG.Parameters@49049a04]" started-at="2021-01-26T15:09:06 IST" name="close" finished-at="2021-01-26T15:09:11 IST" duration-ms="5004" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+at TestNG.Parameters.close(Parameters.java:48)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- TestNG.Parameters -->
+      <class name="TestNG.Data_Provider_Demo1">
+        <test-method signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.Data_Provider_Demo1@290222c1]" started-at="2021-01-26T15:07:57 IST" name="test" data-provider="run_DOB" finished-at="2021-01-26T15:07:57 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rabi Ranjan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mechanical]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[101]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.Data_Provider_Demo1@290222c1]" started-at="2021-01-26T15:07:57 IST" name="test" data-provider="run_DOB" finished-at="2021-01-26T15:07:57 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ashish]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Etc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[102]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.Data_Provider_Demo1@290222c1]" started-at="2021-01-26T15:07:57 IST" name="test" data-provider="run_DOB" finished-at="2021-01-26T15:07:57 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Monika]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EE]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[103]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.Data_Provider_Demo1@290222c1]" started-at="2021-01-26T15:07:57 IST" name="test" data-provider="run_DOB" finished-at="2021-01-26T15:07:57 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lopamudra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Cse]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[104]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.Data_Provider_Demo1@290222c1]" started-at="2021-01-26T15:07:57 IST" name="test" data-provider="run_DOB" finished-at="2021-01-26T15:07:57 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Trident]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[all_rounder]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[105]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- TestNG.Data_Provider_Demo1 -->
+      <class name="TestNG.Day_4">
+        <test-method is-config="true" signature="before_suite()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:56 IST" name="before_suite" finished-at="2021-01-26T15:07:56 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_suite -->
+        <test-method is-config="true" signature="before_test()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:56 IST" name="before_test" finished-at="2021-01-26T15:07:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_test -->
+        <test-method is-config="true" signature="before_class()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="before_class" finished-at="2021-01-26T15:07:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_class -->
+        <test-method is-config="true" signature="before_method()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="before_method" finished-at="2021-01-26T15:07:57 IST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_method -->
+        <test-method signature="test_1()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="test_1" finished-at="2021-01-26T15:07:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+        <test-method is-config="true" signature="after_method()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="after_method" finished-at="2021-01-26T15:07:57 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after_method -->
+        <test-method is-config="true" signature="before_method()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="before_method" finished-at="2021-01-26T15:07:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_method -->
+        <test-method signature="test_3()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="test_3" finished-at="2021-01-26T15:07:57 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_3 -->
+        <test-method is-config="true" signature="after_method()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="after_method" finished-at="2021-01-26T15:07:57 IST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after_method -->
+        <test-method is-config="true" signature="before_method()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="before_method" finished-at="2021-01-26T15:07:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_method -->
+        <test-method signature="test_4()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="test_4" finished-at="2021-01-26T15:07:57 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_4 -->
+        <test-method is-config="true" signature="after_method()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="after_method" finished-at="2021-01-26T15:07:57 IST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after_method -->
+        <test-method is-config="true" signature="after_class()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:07:57 IST" name="after_class" finished-at="2021-01-26T15:07:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after_class -->
+        <test-method is-config="true" signature="after_test()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:09:14 IST" name="after_test" finished-at="2021-01-26T15:09:14 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after_test -->
+        <test-method is-config="true" signature="after_suite()[pri:0, instance:TestNG.Day_4@437da279]" started-at="2021-01-26T15:09:14 IST" name="after_suite" finished-at="2021-01-26T15:09:14 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after_suite -->
+      </class> <!-- TestNG.Day_4 -->
+      <class name="TestNG.Datadriven_test">
+        <test-method signature="test_actions(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.Datadriven_test@1e1a0406]" started-at="2021-01-26T15:07:57 IST" name="test_actions" finished-at="2021-01-26T15:07:57 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [test_actions] with [class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [test_actions] with [class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:437)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:351)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:875)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_actions -->
+      </class> <!-- TestNG.Datadriven_test -->
+      <class name="TestNG.Day_2">
+        <test-method signature="home()[pri:0, instance:TestNG.Day_2@6253c26]" started-at="2021-01-26T15:07:56 IST" name="home" finished-at="2021-01-26T15:07:56 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- home -->
+        <test-method signature="mobile_loan()[pri:0, instance:TestNG.Day_2@6253c26]" started-at="2021-01-26T15:07:56 IST" name="mobile_loan" finished-at="2021-01-26T15:07:56 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mobile_loan -->
+        <test-method is-config="true" signature="web_loan()[pri:0, instance:TestNG.Day_2@6253c26]" started-at="2021-01-26T15:09:14 IST" name="web_loan" finished-at="2021-01-26T15:09:14 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- web_loan -->
+      </class> <!-- TestNG.Day_2 -->
+      <class name="TestNG.Day_3">
+        <test-method is-config="true" signature="cash_gold()[pri:0, instance:TestNG.Day_3@7bab3f1a]" started-at="2021-01-26T15:07:56 IST" name="cash_gold" finished-at="2021-01-26T15:07:56 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cash_gold -->
+        <test-method is-config="true" signature="mobile_gold()[pri:0, instance:TestNG.Day_3@7bab3f1a]" started-at="2021-01-26T15:07:56 IST" name="mobile_gold" finished-at="2021-01-26T15:07:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mobile_gold -->
+        <test-method signature="gold()[pri:0, instance:TestNG.Day_3@7bab3f1a]" started-at="2021-01-26T15:07:56 IST" name="gold" finished-at="2021-01-26T15:07:56 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gold -->
+        <test-method signature="website_gold()[pri:0, instance:TestNG.Day_3@7bab3f1a]" started-at="2021-01-26T15:09:06 IST" name="website_gold" finished-at="2021-01-26T15:09:06 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- website_gold -->
+        <test-method is-config="true" signature="upi_gold()[pri:0, instance:TestNG.Day_3@7bab3f1a]" started-at="2021-01-26T15:09:14 IST" name="upi_gold" finished-at="2021-01-26T15:09:14 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- upi_gold -->
+      </class> <!-- TestNG.Day_3 -->
+      <class name="TestNG.Day_1">
+        <test-method signature="loan()[pri:0, instance:TestNG.Day_1@67f639d3]" started-at="2021-01-26T15:07:56 IST" name="loan" finished-at="2021-01-26T15:07:56 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loan -->
+        <test-method signature="mobile_loan()[pri:0, instance:TestNG.Day_1@67f639d3]" started-at="2021-01-26T15:07:56 IST" name="mobile_loan" finished-at="2021-01-26T15:07:56 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mobile_loan -->
+        <test-method signature="website_loan()[pri:0, instance:TestNG.Day_1@67f639d3]" started-at="2021-01-26T15:09:06 IST" name="website_loan" finished-at="2021-01-26T15:09:06 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- website_loan -->
+      </class> <!-- TestNG.Day_1 -->
+      <class name="TestNG.Parameters_Demo">
+        <test-method signature="test_Url(java.lang.String)[pri:1, instance:TestNG.Parameters_Demo@71a8adcf]" started-at="2021-01-26T15:09:06 IST" name="test_Url" finished-at="2021-01-26T15:09:06 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by @Test on method test_Url but has not been marked @Optional or defined
+in C:\Users\Lenovo\eclipse-workspace\TestNG\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by @Test on method test_Url but has not been marked @Optional or defined
+in C:\Users\Lenovo\eclipse-workspace\TestNG\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:268)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:875)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Url -->
+        <test-method signature="text_feild()[pri:2, instance:TestNG.Parameters_Demo@71a8adcf]" started-at="2021-01-26T15:09:11 IST" name="text_feild" finished-at="2021-01-26T15:09:11 IST" duration-ms="3" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+at TestNG.Parameters_Demo.text_feild(Parameters_Demo.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- text_feild -->
+        <test-method signature="search_press()[pri:3, instance:TestNG.Parameters_Demo@71a8adcf]" started-at="2021-01-26T15:09:11 IST" name="search_press" finished-at="2021-01-26T15:09:14 IST" duration-ms="3004" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+at TestNG.Parameters_Demo.search_press(Parameters_Demo.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_press -->
+      </class> <!-- TestNG.Parameters_Demo -->
+      <class name="TestNG.testNG_methods">
+        <test-method signature="test_1()[pri:0, instance:TestNG.testNG_methods@27462a88]" started-at="2021-01-26T15:07:57 IST" name="test_1" finished-at="2021-01-26T15:07:57 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+        <test-method signature="test_2()[pri:0, instance:TestNG.testNG_methods@27462a88]" started-at="2021-01-26T15:07:57 IST" name="test_2" finished-at="2021-01-26T15:07:57 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_2 -->
+        <test-method signature="test_3()[pri:0, instance:TestNG.testNG_methods@27462a88]" started-at="2021-01-26T15:07:57 IST" name="test_3" finished-at="2021-01-26T15:07:57 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_3 -->
+        <test-method signature="test_4()[pri:0, instance:TestNG.testNG_methods@27462a88]" started-at="2021-01-26T15:07:57 IST" name="test_4" finished-at="2021-01-26T15:07:57 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_4 -->
+        <test-method signature="test_5()[pri:0, instance:TestNG.testNG_methods@27462a88]" started-at="2021-01-26T15:07:57 IST" name="test_5" finished-at="2021-01-26T15:07:57 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_5 -->
+      </class> <!-- TestNG.testNG_methods -->
+      <class name="TestNG.Test_Webdriver_Demo">
+        <test-method signature="test_webdriver_listener()[pri:0, instance:TestNG.Test_Webdriver_Demo@82de64a]" started-at="2021-01-26T15:07:57 IST" name="test_webdriver_listener" finished-at="2021-01-26T15:08:19 IST" duration-ms="21832" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#wrong_id"}
+  (Session info: chrome=88.0.4324.104)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-AB28KPC', ip: '192.168.1.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54916}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0ad36f7bd8608162623d875c96b976d0
+*** Element info: {Using=id, value=wrong_id}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#wrong_id"}
+  (Session info: chrome=88.0.4324.104)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-AB28KPC', ip: '192.168.1.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54916}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0ad36f7bd8608162623d875c96b976d0
+*** Element info: {Using=id, value=wrong_id}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+at com.sun.proxy.$Proxy18.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+at TestNG.Test_Webdriver_Demo.test_webdriver_listener(Test_Webdriver_Demo.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_webdriver_listener -->
+      </class> <!-- TestNG.Test_Webdriver_Demo -->
+      <class name="TestNG.Data_Provider_Demo">
+        <test-method signature="run_dataProvider(java.lang.String, java.lang.String)[pri:0, instance:TestNG.Data_Provider_Demo@12aba8be]" started-at="2021-01-26T15:07:57 IST" name="run_dataProvider" data-provider="data_driven" finished-at="2021-01-26T15:07:57 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firstname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firstpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run_dataProvider -->
+        <test-method signature="run_dataProvider(java.lang.String, java.lang.String)[pri:0, instance:TestNG.Data_Provider_Demo@12aba8be]" started-at="2021-01-26T15:07:57 IST" name="run_dataProvider" data-provider="data_driven" finished-at="2021-01-26T15:07:57 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[secondname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secondpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run_dataProvider -->
+        <test-method signature="run_dataProvider(java.lang.String, java.lang.String)[pri:0, instance:TestNG.Data_Provider_Demo@12aba8be]" started-at="2021-01-26T15:07:57 IST" name="run_dataProvider" data-provider="data_driven" finished-at="2021-01-26T15:07:57 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[thirdname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[thirdpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run_dataProvider -->
+      </class> <!-- TestNG.Data_Provider_Demo -->
+      <class name="TestNG.Data_Annotations">
+        <test-method is-config="true" signature="first()[pri:0, instance:TestNG.Data_Annotations@3cebbb30]" started-at="2021-01-26T15:08:19 IST" name="first" finished-at="2021-01-26T15:08:43 IST" duration-ms="23992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first -->
+        <test-method signature="testing()[pri:0, instance:TestNG.Data_Annotations@3cebbb30]" started-at="2021-01-26T15:08:43 IST" name="testing" finished-at="2021-01-26T15:09:05 IST" duration-ms="22002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testing -->
+        <test-method is-config="true" signature="second()[pri:0, instance:TestNG.Data_Annotations@3cebbb30]" started-at="2021-01-26T15:09:05 IST" name="second" finished-at="2021-01-26T15:09:06 IST" duration-ms="1532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- second -->
+      </class> <!-- TestNG.Data_Annotations -->
+      <class name="TestNG.A_first">
+        <test-method signature="sum()[pri:0, instance:TestNG.A_first@23c30a20]" started-at="2021-01-26T15:07:57 IST" name="sum" finished-at="2021-01-26T15:07:57 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sum -->
+      </class> <!-- TestNG.A_first -->
+    </test> <!-- run_package -->
+  </suite> <!-- Suite -->
+</testng-results>

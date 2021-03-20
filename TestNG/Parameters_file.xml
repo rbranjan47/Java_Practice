@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Yahoo Test">
+
+
+<parameter name="emailID" value="qatestrabi@yahoo.com"></parameter>
+
+<parameter name="password" value="testmakeperfect"></parameter>
+<!--to run in group, put it here -->
+<classes>
+<class name="TestNG.Parameters"></class>
+</classes>
+</test> <!-- Test -->
+</suite> <!-- Suite -->

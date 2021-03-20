@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="6" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="URL" value="google.com"/>
+  <listeners>
+    <listener class-name="TestNG.Listeners"/>
+  </listeners>
+  <test thread-count="6" parallel="tests" name="run_package(failed)">
+    <classes>
+      <class name="TestNG.Parameters">
+        <methods>
+          <include name="start"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- TestNG.Parameters -->
+      <class name="TestNG.Test_Webdriver_Demo">
+        <methods>
+          <include name="test_webdriver_listener"/>
+        </methods>
+      </class> <!-- TestNG.Test_Webdriver_Demo -->
+      <class name="TestNG.Parameters_Demo">
+        <methods>
+          <include name="test_Url"/>
+          <include name="search_press"/>
+          <include name="text_feild"/>
+        </methods>
+      </class> <!-- TestNG.Parameters_Demo -->
+      <class name="TestNG.Datadriven_test">
+        <methods>
+          <include name="test_actions"/>
+          <include name="setup"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- TestNG.Datadriven_test -->
+    </classes>
+  </test> <!-- run_package(failed) -->
+</suite> <!-- Failed suite [Suite] -->
