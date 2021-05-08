@@ -15,12 +15,12 @@ public class Data_Driven_Demo
 		FileInputStream fin=new FileInputStream("./Data/Data_Driven.property");
 		
 		//create the object properties
-		Properties p=new Properties();
-		p.load(fin);  //non static method, load the file
+		Properties proptie=new Properties();
+		proptie.load(fin);  //non static method, load the file
 		//get the data(or value) by passing the key
-		String url=p.getProperty("url");
-		String username=p.getProperty("username");
-		String password=p.getProperty("password");
+		String url=proptie.getProperty("url");
+		String username=proptie.getProperty("username");
+		String password=proptie.getProperty("password");
 		System.out.println(url);
 		System.out.println(username);
 		System.out.println(password);

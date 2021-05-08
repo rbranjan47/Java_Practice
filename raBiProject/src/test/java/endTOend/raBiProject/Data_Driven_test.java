@@ -17,19 +17,19 @@ import Methods.reusable_methodsClass;
 import page_data.landing_pageData;
 import resources.base_class;
 
-public class Data_Driven extends base_class 
+public class Data_Driven_test extends base_class 
 {
 	landing_pageData page_data;
 	reusable_methodsClass reusableMethods;
 
 	// using constructor calling base class
-	public Data_Driven() 
+	public Data_Driven_test() 
 	{
 		super();
 	}
 
 	// assigning driver for this class
-	public Data_Driven(WebDriver driver)
+	public Data_Driven_test(WebDriver driver)
 	{
 		base_class.driver = driver;
 	}
@@ -44,21 +44,21 @@ public class Data_Driven extends base_class
 	@Test(dataProvider = "data_provider")
 	public void pageNavigation(String username_data, String employeename_data) throws IOException, InterruptedException 
 	{
-		String web_url = prop.getProperty("url");
+		String web_url = properties.getProperty("url");
 		driver.get(web_url);
 		Thread.sleep(3000);
 		//validating title of the page
-		String expected_title = prop.getProperty("title");
+		String expected_title = properties.getProperty("title");
 		String actual_pagetitle =driver.getTitle();
 		Assert.assertEquals(actual_pagetitle, expected_title);
 		
 		// creating object of the landing page data
 		page_data = new landing_pageData(driver);
 		// Username
-		String username = prop.getProperty("username");
+		String username = properties.getProperty("username");
 		page_data.signin().sendKeys(username);
 		// Password
-		String password = prop.getProperty("password");
+		String password = properties.getProperty("password");
 		page_data.passWord().sendKeys(password);
 		//validating the login button is present or not
 		Assert.assertTrue(page_data.login().isEnabled());

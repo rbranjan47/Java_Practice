@@ -18,17 +18,17 @@ public class base_class
 {
 	
 	public static WebDriver driver=null;
-	public static Properties prop;
+	public static Properties properties;
 	public static WebDriverWait wait;
 	
 	public base_class() 
 	{
 		try
 		{
-			prop= new Properties();
+			properties= new Properties();
 			FileInputStream file=new FileInputStream("C:\\Users\\rbran\\git\\Java_Practice\\raBiProject"
 					+ "\\src\\main\\java\\resources\\config.properties");
-			prop.load(file);
+			properties.load(file);
 		}
 		catch(FileNotFoundException e)
 		{
@@ -43,7 +43,7 @@ public class base_class
 	@SuppressWarnings("deprecation")
 	public static void InitializerDriver()
 	{
-		String browsername=prop.getProperty("browser");
+		String browsername=properties.getProperty("browser");
 		
 		if (browsername.equals("chrome"))
 		{

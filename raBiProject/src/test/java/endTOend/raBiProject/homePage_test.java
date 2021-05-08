@@ -12,17 +12,17 @@ import org.testng.annotations.Test;
 import page_data.landing_pageData;
 import resources.base_class;
 
-public class home_page extends base_class
+public class homePage_test extends base_class
 {
 	landing_pageData page_data;
 	//using constructor calling base class
-	public home_page()
+	public homePage_test()
 	{
 		super();
 	}
 	
 	//assigning driver for this class
-	public home_page(WebDriver driver)
+	public homePage_test(WebDriver driver)
 	{
 			base_class.driver = driver;
 	}
@@ -36,17 +36,17 @@ public class home_page extends base_class
 	@Test
 	public void pageNavigation() throws IOException, InterruptedException
 	{
-		String web_url = prop.getProperty("url");
+		String web_url = properties.getProperty("url");
 		driver.get(web_url);
 		Thread.sleep(3000);
 		
 		//creating object of the landing page data
 		page_data = new landing_pageData(driver);
 		//Username
-		String username = prop.getProperty("username");
+		String username = properties.getProperty("username");
 		page_data.signin().sendKeys(username);
 		//Password
-		String password = prop.getProperty("password");
+		String password = properties.getProperty("password");
 		page_data.passWord().sendKeys(password);
 		//logging in
 		page_data.login().click();

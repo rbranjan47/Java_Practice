@@ -17,18 +17,18 @@ import page_data.createJob_data;
 import page_data.landing_pageData;
 import resources.base_class;
 
-public class createJob extends base_class
+public class createJob_test extends base_class
 {
 	landing_pageData page_data;
 	createJob_data create_data;
 	//using constructor calling base class
-	public createJob()
+	public createJob_test()
 	{
 		super();
 	}
 	
 	//assigning driver for this class
-	public createJob(WebDriver driver)
+	public createJob_test(WebDriver driver)
 	{
 			base_class.driver = driver;
 	}
@@ -42,20 +42,29 @@ public class createJob extends base_class
 	@Test
 	public void pageNavigation() throws IOException, InterruptedException
 	{
-		String web_url = prop.getProperty("url");
+		String web_url = properties.getProperty("url");
 		driver.get(web_url);
 		Thread.sleep(3000);
 		
 		//creating object of the landing page data
 		page_data = new landing_pageData(driver);
+		
+		//creating object of create_job page
+		create_data = new createJob_data(driver);
+		
 		//Username
-		String username = prop.getProperty("username");
+		String username = properties.getProperty("username");
 		page_data.signin().sendKeys(username);
 		//Password
-		String password = prop.getProperty("password");
+		String password = properties.getProperty("password");
 		page_data.passWord().sendKeys(password);
 		//logging in
 		page_data.login().click();
+		
+		//verifying the title of the page
+		String expected_title = properties.getProperty("title");
+		String actual_pagetitle =driver.getTitle();
+		Assert.assertEquals(actual_pagetitle, expected_title);
 		
 		//verifying admin button
 		Assert.assertTrue(page_data.admin_btn().isEnabled());
@@ -63,38 +72,42 @@ public class createJob extends base_class
 		page_data.admin_btn().click();
 		
 		
+		Thread.sleep(3000);
 		WebElement job_btn = create_data.job_element();
-		Actions act = new Actions(driver);
-		act.moveToElement(job_btn).build().perform();
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(job_btn));
+		Actions act = new Actions(driver);
+		act.moveToElement(job_btn).build().perform();
+		
 		WebElement job_title_click = create_data.job_title_element();
 		reusable_methodsClass.jsclick(job_title_click);
 		Thread.sleep(3000);
 		create_data.add_job().click();
 		//passing title in add job
-		String title = prop.getProperty("title");
+		String title = properties.getProperty("title_fill");
 		create_data.add_job_title_element().sendKeys(title);
 		
 		//passing the description 
-		String description = prop.getProperty("descritption");
+		String description = properties.getProperty("descritption");
 		create_data.add_job_description_element().sendKeys(description);
 		
 		//passing files 
-		String file_choosen = prop.getProperty("file_path");
-		create_data.add_job_file_element().sendKeys(file_choosen);
+		String file_string = properties.getProperty("file_path");
+		WebElement upload_btn = create_data.add_job_file_element();
+		upload_btn.sendKeys(""+file_string+"");
 		
 		//passing note
-		String note = prop.getProperty("note");
+		String note = properties.getProperty("note");
 		create_data.add_job_note_element().sendKeys(note);
 		//clicking on Add button
 		create_data.add_job_savebtn_element().click();
 	}
 	
 	@AfterMethod
-	public void exitup()
+	public void exitup() throws InterruptedException
 	{
+		Thread.sleep(4000);
 		WebElement logout_click_move = page_data.logoutclick();
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver, 10);
