@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="endTOend.raBiProject.createJob"/>
-      <class name="endTOend.raBiProject.home_page"/>
-      <class name="endTOend.raBiProject.Data_Driven"/>
-    </classes>
-  </test> <!-- Test -->
+<!-- -We can also run our test paralley, using parallel="test" -->
+<suite name="Suite" >
+
+	<!--Listeners are in between SUITE and TESTS -->
+	<listeners>
+		<listener
+			class-name="endTOend_raBiProject.Listeners_testng">
+		</listener>
+	</listeners>
+
+	<!-- Create Job Test -->
+	<test name="createjob_testing">
+		<classes>
+			<class name="endTOend_raBiProject.createJob_test" />
+		</classes>
+	</test>
+
+   <!-- Home Page Test -->
+	<test name="homepage_testing">
+		<classes>
+			<class name="endTOend_raBiProject.homePage_test" />
+		</classes>
+	</test>
+	<!-- Data-Driven Test -->
+	<test name="datadriven_testing">
+		<classes>
+			<class name="endTOend_raBiProject.Data_Driven_test" />
+		</classes>
+	</test>
+ <!-- Listeners/addskill Test -->
+	<test name="listeners_addskills_testing">
+		<classes>
+			<class name="endTOend_raBiProject.listeners_addskill" />
+		</classes>
+	</test>
+	<!-- Assign Leave Test -->
+	<test name="assignleave_testing">
+		<classes>
+			<class name="endTOend_raBiProject.assignleave_test" />
+		</classes>
+	</test>
+
 </suite> <!-- Suite -->

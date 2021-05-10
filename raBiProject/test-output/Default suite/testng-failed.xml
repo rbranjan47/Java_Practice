@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="endTOend.raBiProject.assignleave_test">
+      <class name="endTOend_raBiProject.extentReports_vacancies">
         <methods>
-          <include name="leave_assign"/>
           <include name="setup"/>
           <include name="exitup"/>
+          <include name="add_skills"/>
         </methods>
-      </class> <!-- endTOend.raBiProject.assignleave_test -->
+      </class> <!-- endTOend_raBiProject.extentReports_vacancies -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,4 +1,4 @@
-package endTOend.raBiProject;
+package endTOend_raBiProject;
 
 import java.io.IOException;
 

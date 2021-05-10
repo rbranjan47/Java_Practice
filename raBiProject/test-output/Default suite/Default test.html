@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 08 13:10:54 IST 2021</td>
+<td>Started on:</td><td>Tue May 11 02:14:32 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27318 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25904 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='endTOend.raBiProject.assignleave_test.leave_assign()'><b>leave_assign</b><br>Test class: endTOend.raBiProject.assignleave_test</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input id=&quot;assignleave_txtToDate&quot; type=&quot;text&quot; name=&quot;assignleave[txtToDate]&quot; class=&quot;calendar hasDatepicker&quot;&gt; is not clickable at point (275, 413). Other element would receive the click: &lt;div class=&quot;ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all&quot;&gt;...&lt;/div&gt;
+<td title='endTOend_raBiProject.extentReports_vacancies.add_skills()'><b>add_skills</b><br>Test class: endTOend_raBiProject.extentReports_vacancies</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression  because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;&apos; is not a valid XPath expression.
   (Session info: chrome=90.0.4430.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
 Build info: version: &apos;4.0.0-beta-3&apos;, revision: &apos;5d108f9a67&apos;
-System info: host: &apos;LAPTOP-HSQD46T4&apos;, ip: &apos;192.168.225.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
+System info: host: &apos;LAPTOP-HSQD46T4&apos;, ip: &apos;192.168.43.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e972e73d25e1afe6bf4f1ddc4c3dba4a, clickElement {id=bb2e01cc-c57c-4f6b-9d78-7cb34334aa96}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\rbran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51084}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51084/devtoo..., se:cdpVersion: 90.0.4430.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (e972e73d25e1afe6bf4f1ddc4c3dba4a)] -&gt; xpath: //input[@id=&apos;assignleave_txtToDate&apos;]]
-Session ID: e972e73d25e1afe6bf4f1ddc4c3dba4a
+Command: [574c0ec0c3d3488d64d13de362def820, findElement {using=xpath, value=}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\rbran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59375}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59375/devtoo..., se:cdpVersion: 90.0.4430.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 574c0ec0c3d3488d64d13de362def820
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -96,9 +97,11 @@ Session ID: e972e73d25e1afe6bf4f1ddc4c3dba4a
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:153)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:128)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:619)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:237)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:75)
-	at endTOend.raBiProject.assignleave_test.leave_assign(assignleave_test.java:110)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1258)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:386)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at page_data.vacancies_data.save_button_element(vacancies_data.java:129)
+	at endTOend_raBiProject.extentReports_vacancies.add_skills(extentReports_vacancies.java:143)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -127,16 +130,17 @@ Session ID: e972e73d25e1afe6bf4f1ddc4c3dba4a
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace675889995", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace675889995'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input id=&quot;assignleave_txtToDate&quot; type=&quot;text&quot; name=&quot;assignleave[txtToDate]&quot; class=&quot;calendar hasDatepicker&quot;&gt; is not clickable at point (275, 413). Other element would receive the click: &lt;div class=&quot;ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all&quot;&gt;...&lt;/div&gt;
+</pre></div><a href='#' onClick='toggleBox("stack-trace373682836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace373682836'><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression  because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;&apos; is not a valid XPath expression.
   (Session info: chrome=90.0.4430.93)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
 Build info: version: &apos;4.0.0-beta-3&apos;, revision: &apos;5d108f9a67&apos;
-System info: host: &apos;LAPTOP-HSQD46T4&apos;, ip: &apos;192.168.225.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
+System info: host: &apos;LAPTOP-HSQD46T4&apos;, ip: &apos;192.168.43.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e972e73d25e1afe6bf4f1ddc4c3dba4a, clickElement {id=bb2e01cc-c57c-4f6b-9d78-7cb34334aa96}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\rbran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51084}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51084/devtoo..., se:cdpVersion: 90.0.4430.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (e972e73d25e1afe6bf4f1ddc4c3dba4a)] -&gt; xpath: //input[@id=&apos;assignleave_txtToDate&apos;]]
-Session ID: e972e73d25e1afe6bf4f1ddc4c3dba4a
+Command: [574c0ec0c3d3488d64d13de362def820, findElement {using=xpath, value=}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\rbran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59375}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59375/devtoo..., se:cdpVersion: 90.0.4430.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 574c0ec0c3d3488d64d13de362def820
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -148,9 +152,11 @@ Session ID: e972e73d25e1afe6bf4f1ddc4c3dba4a
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:153)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:128)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:619)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:237)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:75)
-	at endTOend.raBiProject.assignleave_test.leave_assign(assignleave_test.java:110)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1258)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:386)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at page_data.vacancies_data.save_button_element(vacancies_data.java:129)
+	at endTOend_raBiProject.extentReports_vacancies.add_skills(extentReports_vacancies.java:143)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -180,8 +186,8 @@ Session ID: e972e73d25e1afe6bf4f1ddc4c3dba4a
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>16</td>
-<td>endTOend.raBiProject.assignleave_test@5ee2b6f9</td></tr>
+<td>18</td>
+<td>endTOend_raBiProject.extentReports_vacancies@256f8274</td></tr>
 </table><p>
 </body>
 </html>
