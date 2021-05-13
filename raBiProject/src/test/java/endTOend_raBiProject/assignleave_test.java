@@ -1,5 +1,9 @@
 package endTOend_raBiProject;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -45,7 +49,7 @@ public class assignleave_test extends base_class
 	
 
 	@Test
-	public void leave_assign() throws InterruptedException
+	public void leave_assign() throws InterruptedException, ParseException
 	{
 		String web_url = properties.getProperty("url");
 		driver.get(web_url);
@@ -72,9 +76,9 @@ public class assignleave_test extends base_class
 		
 		assign_data.assign_leave_btn_element().click();
 		//assing name
-		String name = properties.getProperty("name");
+		String Employeename = properties.getProperty("Employeename");
 		
-		assign_data.employee_name_field_element().sendKeys(name);
+		assign_data.employee_name_field_element().sendKeys(Employeename);
 		
 		//selecting leave type
 		WebElement leave_type = assign_data.select_leave_type_element();
@@ -82,9 +86,46 @@ public class assignleave_test extends base_class
 		Select select = new Select(leave_type);
 		String leave_name = properties.getProperty("leaveName");
 		select.selectByVisibleText(leave_name);
+
+		//Checking leave balance
+		WebElement leave_balance = assign_data.check_leave_balance_element();
+		leave_balance.click();
 		
+		WebElement check_leave_balance = assign_data.balance_leave_balance_element();
+		reusable.webdriverwait(driver, check_leave_balance);
+		
+		//getting leave balance
+		String string_leave_balance = check_leave_balance.getText();
+		System.out.println(string_leave_balance);
+		
+		/*
+		//normally typecasting
+		Double num_leave_balance = Double.parseDouble(string_leave_balance);
+		System.out.println(num_leave_balance);
+		if(num_leave_balance == 0)
+		{
+			System.out.println("same");
+		}
+		*/
+		//using number format to get element
+		NumberFormat format = NumberFormat.getInstance(Locale.ENGLISH);
+		Number number = format.parse(string_leave_balance);
+		Double double_leave_balance = number.doubleValue();
+		
+		
+		System.out.println("Total Holidays "+assign_data.balance_leave_whole_element().getText());
+		//clicking on Ok button
+		Thread.sleep(4000);
+		assign_data.ok_button_element().click();
+		
+		if (double_leave_balance >= 0)
+		{
 		//from date
 		assign_data.calender_from_click_element().click();
+		String assign_from_date = properties.getProperty("assign_from_date");
+		assign_data.from_to_date_element(assign_from_date);
+		//passing date 
+		
 		/*
 		//AS IT IS NOT ACCEPTING VALUE FROM THE GIVEN DATE, WE ARE USING A CLICKING METHOD, USING INDEX TERMINALOGY
 		//using date libraries
@@ -106,8 +147,11 @@ public class assignleave_test extends base_class
 		
 		assign_data.calender_from_click_element().sendKeys(date_in_format);
 		*/
+		
 		//to date
 		assign_data.calender_to_click_element().click();
+		String assign_to_date = properties.getProperty("assign_to_date");
+		assign_data.from_to_date_element(assign_to_date);
 		
 		/*
 		//using date libraries
@@ -129,6 +173,8 @@ public class assignleave_test extends base_class
 		
 		assign_data.calender_from_click_element().sendKeys(date_to_format);
 		*/
+		
+		/*
 		assign_data.to_date_click_element().click();
 		WebElement month_select = assign_data.from_moth_click_element();
 		//waiting for that element
@@ -139,10 +185,20 @@ public class assignleave_test extends base_class
 		select_month.selectByVisibleText(short_month);
 		
 		assign_data.from_date_click_element().click();
+		*/
+		
+		
 		Thread.sleep(3000);
 		String comment = properties.getProperty("comments");
 		assign_data.comment_lines_element().sendKeys(comment);
 		assign_data.assign_btn_element().click();
+		
+		}
+		else
+		{
+			log.info("Employee don't have sufficient leave balance");
+			System.out.println("Employee don't have sufficient leave balance");
+		}
 	
 	}
 	

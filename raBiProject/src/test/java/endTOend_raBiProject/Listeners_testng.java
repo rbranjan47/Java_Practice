@@ -7,32 +7,47 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import Methods.util;
+import reports.extent_reports;
 import resources.base_class;
 
 public class Listeners_testng extends base_class implements ITestListener
 {
 	util utils;
+	ExtentTest test;
+
+	//calling the extent reports method
+	ExtentReports extent_report = extent_reports.get_reportObject();
+	//To make thread safe, whenever test cases will run parallely
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	
+	
 	//IT WILL EXECUTE ON TEST START
 	@Override
 	public void onTestStart(ITestResult result)
 	{
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestStart(result);
+		//we are getting method name by GET PROPERTY method
+		String method_name = result.getMethod().getMethodName();
+		test =  extent_report.createTest(method_name);
+		extentTest.set(test);
 	}
 	
 	//IT WILL ON TEST SUCCESS
 	@Override
 	public void onTestSuccess(ITestResult result) 
 	{
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestSuccess(result);
+		extentTest.get().log(Status.PASS, "Test Passed");
 	}
 	
 	//IT WILL EXECUTE TEST FAILURE
 	@Override
 	public void onTestFailure(ITestResult result) 
 	{
+		extentTest.get().fail(result.getThrowable());
 		WebDriver driver =  null;
 		String testcaseMethod_Name = result.getMethod().getMethodName();
 		
@@ -48,7 +63,7 @@ public class Listeners_testng extends base_class implements ITestListener
 		}
 		try 
 		{
-			utils.takescreenshot_driver(testcaseMethod_Name, driver);
+			extentTest.get().addScreenCaptureFromPath(utils.takescreenshot_driver(testcaseMethod_Name, driver), testcaseMethod_Name);
 		} 
 		catch (IOException e)
 		{
@@ -94,8 +109,8 @@ public class Listeners_testng extends base_class implements ITestListener
 	@Override
 	public void onFinish(ITestContext context)
 	{
-		// TODO Auto-generated method stub
-		ITestListener.super.onFinish(context);
+		//to notify extent, reporting is completed
+		extent_report.flush();
 	}
 	
 }

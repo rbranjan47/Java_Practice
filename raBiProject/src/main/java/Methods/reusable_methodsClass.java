@@ -2,7 +2,6 @@ package Methods;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -61,5 +60,4 @@ public class reusable_methodsClass extends base_class
 		execute.executeScript("history.go(0)");
 		
 	}
-
 }

@@ -21,7 +21,7 @@ public class util extends base_class
 		base_class.driver = driver;
 	}
 	
-	public void takescreenshot_driver(String testcasename, WebDriver driver) throws IOException
+	public String takescreenshot_driver(String testcasename, WebDriver driver) throws IOException
 	{
 		TakesScreenshot screen_shot = (TakesScreenshot)driver;
 		File input_source = screen_shot.getScreenshotAs(OutputType.FILE);
@@ -31,6 +31,8 @@ public class util extends base_class
 		//file utils
 		FileUtils.copyFile(input_source, output_source);
 		
+		return filePathname;
 	}
+	
 	
 }

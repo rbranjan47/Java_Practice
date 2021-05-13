@@ -89,50 +89,49 @@ public class extentReports_vacancies extends base_class
 			reusable.webdriverwait(driver, add_candidiate);
 			add_candidiate.click();
 			
-			String firstname = properties.getProperty("firstname"+i);
-			String middlename = properties.getProperty("middlename"+i);
-			String lastname = properties.getProperty("lastname"+i);
-			String email_address = properties.getProperty("email"+i);
-			String contactNo = properties.getProperty("contactNo"+i);
-			String jobvacancy = properties.getProperty("jobvacancy"+i);
-			String file_string = properties.getProperty("file_path");
-			String keywords = properties.getProperty("keywords"+i);
-			String comment = properties.getProperty("comment"+i);
-			String date = properties.getProperty("date"+i);
-			
 			//firstname
+			String firstname = properties.getProperty("firstname"+i);
 			vacancies.first_name_element().sendKeys(firstname);
 			
 			//middlename
+			String middlename = properties.getProperty("middlename"+i);
 			vacancies.middle_name_element().sendKeys(middlename);
 			
 			//lastname
+			String lastname = properties.getProperty("lastname"+i);
 			vacancies.last_name_element().sendKeys(lastname);
 			
 			//email_address
+			String email_address = properties.getProperty("email"+i);
 			vacancies.email_element().sendKeys(email_address);
 			
 			//contact_No
+			String contactNo = properties.getProperty("contactNo"+i);
 			vacancies.contact_no_element().sendKeys(contactNo);
 			
 			//job vacancy
+			String jobvacancy = properties.getProperty("jobvacancy"+i);
 			WebElement vacancy = vacancies.job_vacancy_element();
 			vacancy.click();
 			Select select = new Select(vacancy);
 			select.selectByVisibleText(jobvacancy);
 			
 			//uploadinf resume
+			String file_string = properties.getProperty("file_path");
 			WebElement upload_btn = vacancies.resume_upload_element();
 			upload_btn.sendKeys(""+file_string+"");
 			
 			//keywords
+			String keywords = properties.getProperty("keywords"+i);
 			vacancies.keywords_element().sendKeys(keywords);
 			
 			//comments
+			String comment = properties.getProperty("comment"+i);
 			vacancies.comments_element().sendKeys(comment);
 			
 			//calender date and selecting it
 			vacancies.calender_feild_element().click();
+			String date = properties.getProperty("date"+i);
 			vacancies.enroll_date_element(date).click();
 			
 			//Consent_keep_data Check box
@@ -147,7 +146,9 @@ public class extentReports_vacancies extends base_class
 			System.out.println(details);
 			
 			//clicking on back button
-			vacancies.back_button_element().click();
+			WebElement back_btn = vacancies.back_button_element();
+			reusable.webdriverwait(driver, back_btn);
+			reusable_methodsClass.jsclick(back_btn);
 			Thread.sleep(3000);
 		}
 	}

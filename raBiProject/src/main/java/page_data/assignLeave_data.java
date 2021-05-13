@@ -11,6 +11,10 @@ public class assignLeave_data
 	public static By assign_leave_btn = By.xpath("//span[contains(text(),'Assign Leave')]");
 	public static By employee_name_field = By.xpath("//input[@id='assignleave_txtEmployee_empName']");
 	public static By select_leave_type = By.xpath("//select[@id='assignleave_txtLeaveType']");
+	public static By check_leave_balance = By.xpath("//a[contains(text(),'view details')]");
+	public static By balance_leave_balance = By.xpath("//td[@id='balance_total']");
+	public static By balance_leave_whole = By.xpath("//table[@class='table']/tfoot");
+	public static By ok_button = By.xpath("//div[@id='balance_details']//input[@id='closeButton']");
 	public static By calender_from_click = By.xpath("//input[@id='assignleave_txtFromDate']");
 	public static By to_date_click = By.xpath("//a[@class='ui-state-default']/../../../tr[4]/td[5]");
 	public static By from_moth_click = By.xpath("//select[@class='ui-datepicker-month']");
@@ -32,6 +36,26 @@ public class assignLeave_data
 	public WebElement employee_name_field_element()
 	{
 		return driver.findElement(employee_name_field);
+	}
+	
+	public WebElement check_leave_balance_element()
+	{
+		return driver.findElement(check_leave_balance);
+	}
+	
+	public WebElement balance_leave_balance_element()
+	{
+		return driver.findElement(balance_leave_balance);
+	}
+	
+	public WebElement balance_leave_whole_element()
+	{
+		return driver.findElement(balance_leave_whole);
+	}
+	
+	public WebElement ok_button_element()
+	{
+		return driver.findElement(ok_button);
 	}
 	
 	public WebElement select_leave_type_element()
@@ -71,5 +95,10 @@ public class assignLeave_data
 	public WebElement from_date_click_element()
 	{
 		return driver.findElement(from_date_click);
+	}
+	
+	public WebElement from_to_date_element(String date)
+	{
+		return driver.findElement(By.xpath("//a[contains(text(),'"+date+"')]"));
 	}
 }

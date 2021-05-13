@@ -41,5 +41,11 @@
 			<class name="endTOend_raBiProject.assignleave_test" />
 		</classes>
 	</test>
+	<!-- extentReports_vacancies  Test -->
+	<test name="extentReports_vacancies_testing">
+		<classes>
+			<class name="endTOend_raBiProject.extentReports_vacancies" />
+		</classes>
+	</test>
 
 </suite> <!-- Suite -->

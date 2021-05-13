@@ -24,7 +24,7 @@ public class vacancies_data
 	//clicking on the calender field
 	public static By calender_feild = By.xpath("//input[@id='addCandidate_appliedDate']");
 	public static By consent_keep_data = By.xpath("//input[@id='addCandidate_consentToKeepData']");
-	public static By save_button = By.xpath("");
+	public static By save_button = By.xpath("//input[@id='btnSave']");
 	//getting value from saved data
 	public static By saved_details = By.xpath("//table[@id='resultTable']/tbody");
 	public static By back_button = By.xpath("//input[@id='btnBack']");
