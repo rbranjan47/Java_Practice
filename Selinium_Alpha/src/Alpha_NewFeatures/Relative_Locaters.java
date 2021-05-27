@@ -11,6 +11,7 @@ import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 public class Relative_Locaters 
 {
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) 
 	{
 		System.setProperty("webdriver.chrome.driver", "F:\\chromedriver\\chromedriver.exe");

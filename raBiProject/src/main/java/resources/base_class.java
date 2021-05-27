@@ -26,7 +26,7 @@ public class base_class
 		try
 		{
 			properties= new Properties();
-			FileInputStream file=new FileInputStream("C:\\Users\\rbran\\git\\Java_Practice\\raBiProject"
+			FileInputStream file=new FileInputStream(System.getProperty("user.dir")
 					+ "\\src\\main\\java\\resources\\config.properties");
 			properties.load(file);
 		}
