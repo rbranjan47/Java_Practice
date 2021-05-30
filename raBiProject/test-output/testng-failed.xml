@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="rough.rough_class">
+      <class name="endTOend_raBiProject.listeners_addskill">
         <methods>
-          <include name="leave_assign"/>
+          <include name="exitup"/>
+          <include name="add_skills"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- rough.rough_class -->
+      </class> <!-- endTOend_raBiProject.listeners_addskill -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,5 +1,6 @@
 package endTOend_raBiProject;
 
+import org.apache.commons.mail.EmailException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Methods.reusable_methodsClass;
+import Methods.util;
 import page_data.addSkills_data;
 import page_data.landing_pageData;
 import resources.base_class;
@@ -21,6 +23,7 @@ public class listeners_addskill extends base_class
 	landing_pageData page_data;
 	addSkills_data addskills;
 	reusable_methodsClass reusable;
+	util utils;
 	
 	//importing log manager
 	public static Logger log = LogManager.getLogger(assignleave_test.class.getName());
@@ -44,7 +47,7 @@ public class listeners_addskill extends base_class
 	
 
 	@Test
-	public void add_skills() throws InterruptedException
+	public void add_skills() throws InterruptedException, EmailException
 	{
 		String web_url = properties.getProperty("url");
 		driver.get(web_url);
@@ -58,6 +61,9 @@ public class listeners_addskill extends base_class
 		
 		//creating object of reusable class
 		reusable = new reusable_methodsClass(driver);
+		
+		//creating objects of utils class
+		utils = new util(driver);
 		
 		// Username
 		String username = properties.getProperty("username");
@@ -120,6 +126,8 @@ public class listeners_addskill extends base_class
 					Thread.sleep(3000);
 					}
 			}
+		String message = "this is listeners class test";
+		utils.emails(message);
 		
 	}
 	
