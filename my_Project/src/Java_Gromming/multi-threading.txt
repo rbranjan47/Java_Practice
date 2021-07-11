@@ -1,0 +1,13 @@
+We can implement thread, by 2 methods;
+a. By extanding the thread
+b. by implementing Runnable Iterface
+--------------------------------------------------------------------------------
+Getting and Setting Name of the Thread
+--------------------------------------------------------------------------------
+Thread Priorities
+--------------------------------------------------------------------------------
+The method to prevent Thread;
+a. yeild()
+b. join()
+c. sleep()
+--------------------------------------------------------------------------------

@@ -7,9 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-
-public class Relative_Locaters 
+import org.openqa.selenium.support.locators.RelativeLocator; class Relative_Locaters 
 {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) 
@@ -23,24 +21,24 @@ public class Relative_Locaters
 		
 		//ABOVE web-element
 		WebElement name=driver.findElement(By.cssSelector("input[name='name']"));
-		String result=driver.findElement(withTagName("Name").above(name)).getText();
+		String result=driver.findElement(RelativeLocator.with(By.tagName("Name")).above(name)).getText();
 		System.out.println(result);
 		
 		//BELOW web-element
 		WebElement DOB=driver.findElement(By.cssSelector("label[for='dateofBirth']"));
-		driver.findElement(withTagName("Date of Birth").below(DOB)).sendKeys("10/10/2020");
+		driver.findElement(RelativeLocator.with(By.tagName("Date of Birth")).below(DOB)).sendKeys("10/10/2020");
 		
 		
 		//near web-element
 		WebElement checkbox_1=driver.findElement(By.id("inlineRadio2"));
-		driver.findElement(withTagName("Employed").near(checkbox_1)).getText();
+		driver.findElement(RelativeLocator.with(By.tagName("Employed")).near(checkbox_1)).getText();
 		
 		//to Right of
 		WebElement right=driver.findElement(By.id("inlineRadio1"));
-		  System.out.println(driver.findElement(withTagName("Employment Status").toRightOf(right)).getText());
+		  System.out.println(driver.findElement(RelativeLocator.with(By.tagName("Employment Status")).toRightOf(right)).getText());
 		
 		//to Left of
 		WebElement left=driver.findElement(By.id("exampleCheck1"));
-		driver.findElement(withTagName("Check me out if you Love IceCreams!").toLeftOf(left)).click();
+		driver.findElement(RelativeLocator.with(By.tagName("Check me out if you Love IceCreams!")).toLeftOf(left)).click();
 	}
 }
