@@ -1,6 +1,5 @@
 package Java_Gromming;
-
-public class extend_ThreadClass extends Thread{
+class thread_class implements Runnable {
 	public void run() {
 		try {
 			System.out.println("Thread "+Thread.currentThread().getId()+" is running");
@@ -9,12 +8,13 @@ public class extend_ThreadClass extends Thread{
 			System.out.println("Exception occured!");
 		}
 	}
+}
+class implement_runnableInterface  {
 	public static void main(String[] args) {
 		int n=8;
-		for(int i=0;i<n;i++) {
-			extend_ThreadClass obj = new extend_ThreadClass();
+		for (int i=0; i<n;i++) {
+			Thread obj = new Thread(new thread_class());
 			obj.start();
 		}
 	}
-
 }

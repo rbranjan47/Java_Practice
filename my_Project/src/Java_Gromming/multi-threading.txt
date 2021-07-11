@@ -1,13 +1,65 @@
+Multi-Threading:
+Multi-Threading is a concept of JAVA that allows concurrent execution of two or
+more parts of program for maximum utilization of CPU. 
+--------------------------------------------------------------------------------
+start() method is used for creation of new Thread, while 
+run() method id used for runnig the new Created Thread.
+
+We can't call start() method twice otherwise it will throw illegalStateException.
+But, we can call run() method multiple times.
+Each parts of such program are called as THREAD.
+--------------------------------------------------------------------------------
+
 We can implement thread, by 2 methods;
 a. By extanding the thread
 b. by implementing Runnable Iterface
+
+If we extend Thread class, we can't extend other class as java doesn't support 
+   multiple inheritance.
+   
 --------------------------------------------------------------------------------
+
 Getting and Setting Name of the Thread
 --------------------------------------------------------------------------------
-Thread Priorities
+
+Thread Priorities, depends on its state:
+1. New 
+2. Runnable
+3. Blocked
+4. Waiting
+5. Timed Waiting
+6. Terminated
+
 --------------------------------------------------------------------------------
+Main Thread:
+When Java program starts running usally 1 Thread starts run automatically, this 
+is called as main Thread.
+
+To Stop the automatic execution of main Thread, we can use Current Thread() method.
+
+3 types of Thread-Priority:
+public static int MIN_PRIORITY, minimum priority having value 1
+public static int NORM_PRIORITY, default priority having default value i.e. 5
+public static int MAX_PRIORITY, maximum priority having value 10
+
 The method to prevent Thread;
 a. yeild()
 b. join()
 c. sleep()
 --------------------------------------------------------------------------------
+
+Synchronization
+--------------------------------------------------------------------------------
+
+Interthread communication
+--------------------------------------------------------------------------------
+
+Dead-lock
+--------------------------------------------------------------------------------
+
+Deamon Threads
+--------------------------------------------------------------------------------
+
+Multi-Threading Enhancements
+--------------------------------------------------------------------------------
+
