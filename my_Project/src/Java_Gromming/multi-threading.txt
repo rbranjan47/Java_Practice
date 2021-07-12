@@ -58,6 +58,12 @@ Dead-lock
 --------------------------------------------------------------------------------
 
 Deamon Threads
+Daemon thread is a service provider, which provides service to running threads.
+
+For Example, Finalizer thread is running automatically to kill all the running 
+             threads in after complete execution of a program.
+             
+             
 --------------------------------------------------------------------------------
 
 Multi-Threading Enhancements

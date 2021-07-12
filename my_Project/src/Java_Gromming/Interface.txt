@@ -1,0 +1,183 @@
+Interface,
+Like a class, an interface can have nethods and variables, but the methods declared in an interface are by default
+abstract(only method signature, no body)
+
+* By default, methods in the abstract are public, static and final
+* and, Class are abstract and public
+
+* Interface is a like a blueprint of class 
+* If class an implements Interface and doesn't provide method body, then that class must be ABSTRACT class
+* COMPARATOR Interface, if class implements this interface, then it can be used to sort a collection
+n
+-------------------------------------------------------------------------------------------------------------------------
+
+USES OF INETRFACE:
+* Used to achieve total abstraction
+* To achieve mutliple inheritance using Interface
+* Used to achieve the loose coupling 
+* Interface is used to implement the abstraction, becuase Abstract class may contains NON-FINAL variables
+
+--------------------------------------------------------------------------------------------------------------------------
+
+New Features in JAVA JDK 8:
+
+a. from JDK 8, we don't need to call the function/method, with the help of default implementation we use body of functions.
+
+b. We can also use static method, so we can call it without an Object
+                [These methods not be inherited]
+
+c.From Java 9, interface can also contains:
+                  i. Static methods
+                  ii. Private methods
+                  iii. Private Static methods
+                    
+                    
+----------------------------------------------------------------------------------------------------------------------------
+
+
+Nested Interface:
+-----------------
+Interface can also declare as member of class or another interface, such are called as nested Interface.
+
+**By default interface is public, but while declaring the nested interface it may be public, default, protected but NOT private.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Marker Interface:
+----------------
+An empty interface is called as marker interface.
+Ex. Serializable, clonable.
+----------------------------------------------------------------------------------------------------------------------------
+
+                                                           ABSTRACT CLASS IN JAVA:
+                                                          -------------------------
+* An instance of an abstract class cannot be created, we can have refrences to go through abstract class.
+
+ abstract class Base {
+    abstract void fun();
+}
+class Derived extends Base {
+    void fun()
+    {
+        System.out.println("Derived fun() called");
+    }
+}
+class Main {
+    public static void main(String args[])
+    {
+  
+        // Uncommenting the following line will cause
+        // compiler error as the line tries to create an
+        // instance of abstract class. Base b = new Base();
+  
+        // We can have references of Base type.
+        Base b = new Derived();
+        b.fun();
+    }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+* Abstract class can also have constrauctor, and can be called when instance of Inherited class created.
+
+  // An abstract class with constructor
+abstract class Base {
+    Base()
+    {
+        System.out.println("Base Constructor Called");
+    }
+    abstract void fun();
+}
+class Derived extends Base {
+    Derived()
+    {
+        System.out.println("Derived Constructor Called");
+    }
+    void fun()
+    {
+        System.out.println("Derived fun() called");
+    }
+}
+class Main {
+    public static void main(String args[])
+    {
+        Derived d = new Derived();
+    }
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+* We can also create Abstract class without any Abstract methods,
+   This cause we can not be instantiated but can only be inherited.
+   
+   // An abstract class without any abstract method
+abstract class Base {
+    void fun() { System.out.println("Base fun() called"); }
+}
+  
+class Derived extends Base {
+}
+  
+class Main {
+    public static void main(String args[])
+    {
+        Derived d = new Derived();
+        d.fun();
+    }
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+*Abstract class can also have final methods(can not be overridden)
+
+// An abstract class with a final method
+abstract class Base {
+    final void fun()
+    {
+        System.out.println("Derived fun() called");
+    }
+}
+  
+class Derived extends Base {
+}
+  
+class Main {
+    public static void main(String args[])
+    {
+        Base b = new Derived();
+        b.fun();
+    }
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+* For any Abstract Java, we are not allowed to create an Object and Intialization is not possible.
+
+// An abstract class example
+abstract class Test {
+    public static void main(String args[])
+    {
+        // Try to create an object
+        Test t = new Test();
+    }
+}
+
+--This will give an compile time error, can not be create object for the abstract class.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+* Similar interface, we can define static methods in an Abstract Class that called be independently without an object.
+
+abstract class Party {
+    static void doParty()
+    {
+        System.out.println("Lets have some fun!!");
+    }
+}
+  
+public class Main extends Party {
+    public static void main(String[] args)
+    {
+        Party.doParty();
+    }
+}
+
+
