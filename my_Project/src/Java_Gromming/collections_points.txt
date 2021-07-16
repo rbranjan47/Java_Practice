@@ -1,0 +1,75 @@
+Collection:
+-----------
+a. Collection is an interface present in the java.util package and it extends ITERABLE interface
+b. It is used to represent the group of individuals Object as a single unit.
+c. List, Set and Queue are the main sub-interface of the collection interface.
+
+
+Some Important methods of Collection Interface like,
+add(), remove(), clear(), size() and contains()
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Collections:
+------------
+a. Collections is a utility class present in the Java.util package
+b. It defines several utility methods like sorting(), searching()
+c. it has all static methods, and these methods provide much convenience to the developers.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                                  Iterator and Iterable Interface
+                                  -------------------------------
+Iterator is used to retrive the elements from the collection framework one by one.
+
+a. Implement the Iterable interface 
+b. create an iterator class which implements iterator interface and corresponding methods.
+
+It has 3 methdods:
+i. hasNext()
+ii. next()
+iii. remove()
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                                              List
+                                              ----
+List provide Ordered collection, where duplicates are allowed.
+It is a child interface of Collection.
+NULL is also stored in the List, with its many times duplicates.
+
+Representation: public abstract interface List extends Collection
+
+
+ArrayList, LinkedList, Stack, Queue extends the List Interface
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+* ArrayList, is a class which is implemented in the collection framework provides us dynamic arrays in Java.
+* Maintain Insertion order
+* Synchronized
+* Allows random access, but works at Index.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+* LinkedList,
+* Insertion Order
+* non-Synchronized
+* Not, randow access and connected with DATA-STRUCTURE DOUBLE LINKED LIST
+   i.e. if we can't replace data member from another data member
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+** Stack,
+* Legacy class, it was from Collection
+* Based on Last-in-First-Out(LIFO)
+
+* methods like, 
+a. empty()
+b. search()
+c. peek(), return value of top index
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ 
