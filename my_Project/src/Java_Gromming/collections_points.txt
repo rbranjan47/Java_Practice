@@ -44,32 +44,140 @@ Representation: public abstract interface List extends Collection
 ArrayList, LinkedList, Stack, Queue extends the List Interface
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+                                                   
+                                             ArrayList
+                                             ---------
 * ArrayList, is a class which is implemented in the collection framework provides us dynamic arrays in Java.
 * Maintain Insertion order
 * Synchronized
 * Allows random access, but works at Index.
 
+** Where Increment capacity, (3n/2)  
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-* LinkedList,
+                                           LinkedList
+                                           ----------
 * Insertion Order
 * non-Synchronized
 * Not, randow access and connected with DATA-STRUCTURE DOUBLE LINKED LIST
    i.e. if we can't replace data member from another data member
+   
+ **Linked List commons methods:
+ 1. addFirst()
+ 2. addLast()
+ 3. getFirst()
+ 4. getLast()
+ 5. removeFirst()
+ 6. removeLast()
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-** Stack,
+                                             Stack
+                                             -----
 * Legacy class, it was from Collection
 * Based on Last-in-First-Out(LIFO)
+* Implements Serializable, Clonable, Iterable, List, Collection, Random Access.
 
 * methods like, 
 a. empty()
 b. search()
 c. peek(), return value of top index
+d. push
+e. pop
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+                                             Vector
+                                             ------
+* Legacy class & Synchronized
+* Implements GROWABLE array of objects
+* found in the JAVA.UTIL package, implements LIST interface
+* Implements marker interface likes, Serializable, Cloneable, and RandomAcess.
+
+public class Vector<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable
+
+
+It have 4 constructor:
+
+a. Vector<E> v = new Vector<E>();
+b. Vector<E> v = new Vector<E>(int size);
+c. Vector<E> v = new Vector<E>(int size, int increment_size);
+d. Vector<E> v = new Vector<E>(Collection c);
+
+
+Where Increment capacity, 2n 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                                          toArray() method
+                                          ----------------
+** toArray() method used to fom array of the elements in the collections.
+
+** Exceptions we are getting, due to toArray method,
+  ArrayStoreException
+  NullPointerException
+  
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                                                Queue Interface
+                                                ---------------
+** Queue interface present in the java.util package extends the collection interface.
+** Elements processed in FIFO(First in First Out) order.
+** Linked List maintains the Insertion Order
+
+** Through LinkedList Object and refrences, we can access complete functionality of QUEUE, DEQUEUE and LIST.
+     Like addfirst, addlast, removefirst, removelast.....
+
+** Methods for Queue,
+   1. boolean add(object)---- Used to Insert the Specified element into Queue and return true or false
+   2. boolean offer(object)---- Insert the Specified element into Queue
+   3. Object remove()---- Retrieves and removes the head/top of the Queue
+   4. Object poll()---- Retrieves and removes the head/top of the Queue and return NULL when QUEUE is empty
+   5. Object element()---- Retrives but do not remove top the Queue
+   6. Object peek()---- Retrives but do not remove and not return NULL if Queue is empty
+   
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+   
+                                                  Priority Queue
+                                                  --------------
+** Implements QUEUE Interface and marker interface like Serlizable.  
+** It doen't allows NULL. 
+** We CAN'T create an Priority Queue Object that are NON-COMPARABLE.
+    i.e. Object of priority Queue must be cmparable.
+
+** Since, priority Queue is NOT thread-safe, so it is also implementing PriorityBlockingQueue class
+           to use in multi-threading.
+           
+           
+**** It has 6 constructors,
+
+ 1. PriorityQueue<E> pq = new PriorityQueue<E>();
  
+ 2. PriorityQueue<E> pq = new PriorityQueue<E>(Collection<E> c);
+ 
+ 3. PriorityQueue<E> pq = new PriorityQueue<E>(int initialCapacity);
+ 
+ 4. PriorityQueue<E> pq = new PriorityQueue(int initialCapacity, Comparator<E> comparator);
+ 
+ 5. PriorityQueue<E> pq = new PriorityQueue(PriorityQueue<E> c);
+ 
+ 6. PriorityQueue<E> pq = new PriorityQueue<E>(SortedSet<E> c);
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+                                                    Comparator Interface
+                                                    --------------------
+** Comparator interface, where we can compare two Object by creating overriding methods.
+** It have 2 methods,
+      a. compareTo
+      b. equals
+ 
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+           
+                                                  De-Queue Interface
+                                                  ------------------
+  ** De-queue present in the Java.util package is a sub-type of QUEUE interface                                                
+
+  
