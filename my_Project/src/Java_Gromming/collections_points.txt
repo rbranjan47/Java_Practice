@@ -176,8 +176,231 @@ Where Increment capacity, 2n
  
  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
            
-                                                  De-Queue Interface
+                                                  DeQue Interface
                                                   ------------------
-  ** De-queue present in the Java.util package is a sub-type of QUEUE interface                                                
-
+  ** Deque present in the Java.util package is a sub-type of QUEUE interface.
+  ** DOUBLE-ENDED queue, which helps to ADDITIONS/REMOVAL elements from both end of the data-structure.
+  ** Using as FIFO(First-in-first-out) or as STACK(LIFO).
   
+  Declarations:                                             
+                public interface Deque extends Queue
+                
+**Methods for Deque,
+   1. boolean add(object)---- Used to Insert the Specified element into Queue and return true or false
+   2. boolean offer(object)---- Insert the Specified element into Queue
+   3. Object remove()---- Retrieves and removes the head/top of the Queue
+   4. Object poll()---- Retrieves and removes the head/top of the Queue and return NULL when QUEUE is empty
+   5. Object element()---- Retrives but do not remove top the Queue
+   6. Object peek()
+   7. booleanaddFirst()......
+   
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  
+                                                    Array-DeQue
+                                                    -----------
+** Resizable Array, no capacity restrictions
+** Not THREAD-SAFE
+** NULL not allowed
+** ArrayDeque is faster than STACK when used as Stack
+** ArrauDeque is faster than LinkedList when used a queue.
+
+
+**** It has 3 Constructor:
+    1. ArrayDeque<E> dq = new ArrayDeque<E>();
+    2. ArrayDeque<E> dq = new ArrayDeque<E>(Collection col);
+    3. ArrayDeque<E> dq = new ArrayDeque<E>(int numofElements);
+    
+    
+**** Methods for Deque:
+    1. add()
+    2. addFirst()
+    3. addLast()
+    4. offer()
+    5. offerFirst()
+    6. offerLast()
+    7. getFirst()
+    8. getLast()
+    9. peek()
+   10. peekFirst()
+   11. peekLast()
+   12. remove()
+   13. removeFirst()
+   14. removeLast()
+   15. poll()
+   16. pollFirst()
+   17. pollLast()
+   18. pop()
+    
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  
+                                                    Set Interface
+                                                    -------------
+
+** Set Interface present in the java.util package and extends the collection interface.
+** Does not maintains Insertion order and not allows duplicates.
+
+** Two Interface which extend the Set Implementation are:
+    a. SortedSet
+    b. NavigableSet
+    
+   ---> public interface Set extends Collection
+                                                     
+     ** Operations on Set Interface:
+       a. intersection   --- returns common elements from the Set's ---> retainAll()
+       b. union  --- returns all the elements in both Set's ---> addAll()
+       c. difference --- returns difference between the Set's ---> removeAll()
+       
+** List Interface methods also in Set Interface.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+                                                       HashSet
+                                                       -------
+                                                       
+** HashSet class implements the Set Interface
+** Data structure is Hashtable
+** Duplicates not allowed
+** Doesnot maintain Insertion order
+** NULL is allowed but only once, as duplicates not allowed
+** Implements Marker Interface like Serializable and cloneable.
+
+
+** we can make it Synchronized, by
+            Set s = Collection.synchronizedSet(new HashSet(.......));
+            
+** 4 Constrcutors:
+       a. HashSet<E> hs = new HashSet<E>();
+       b. HashSet<E> hs = new HashSet<E>(int init_capacity);
+       c. HashSet<E> hs = new HashSet<E>(int init_capacity, float load_factor);
+       d. HashSet<E> hs = new HashSet<E>(Collection c);
+                                                    
+** Load Factor = Stored Elements / Size of the hash table ;
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                                                        Linked HashSet
+                                                        --------------
+
+** Maintains the Insertion order
+** Maintains doubly-linked list across the iteration
+** Implements marker interface like serializable, cloneable
+
+ --> public class LinkedHashSet<E> extends HashSet<E> implements Set<E>, Cloneable, Serializable
+ 
+** 4 Constrcutors:
+       a. LinkedHashSet<E> hs = new LinkedHashSet<E>();
+       b. LinkedHashSet<E> hs = new LinkedHashSet<E>(int init_capacity);
+       c. LinkedHashSet<E> hs = new LinkedHashSet<E>(int init_capacity, float load_factor);
+       d. LinkedHashSet<E> hs = new LinkedHashSet<E>(Collection c);  
+       
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      
+                                                        Sorted Set Interface
+                                                        --------------------   
+**   Set <------ SortedSet <------ NavigableSet <------ TreeSet
+
+**  public interface SortedSet extends Set
+** All elements get's Sorted automatically
+** All the elements of a sorted Set must implements COMPARABLE INTERFACE.
+
+
+    SortedSet<Object> srt = new TreeSet<Object>();
+    
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                           Navigable Set
+                                                           -------------
+** implementing the navigable set.
+** Behaves like SortedSet, but we have navigable methods avilable in the Sorted Set.
+** A navigableSet nay be accessed and transversed in either ascending or Descending order.
+ 
+ 
+** TREESET implements the navigable Set.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                                TreeSet
+                                                                -------
+** implementations of SortedSet Interface.
+** implements the NavigableSet Interface and AbstractSet Class
+** Objects are sorted and Showing in the ASCENDING order
+** Doesn't maintain Insertion Order
+** Doesn't accept Heterogenous Objects
+** Doesn't allows NULL, throws NullPointerException
+
+
+* Constructors of TreeSet Class:
+  ------------------------------
+                 a. TreeSet ts = new TreeSet();
+                 b. TreeSet ts = new TreeSet(Comparator comp);
+                 c. TreeSet ts = new TreeSet(Collection c);
+                 d. TreeSet ts = new TreeSet(Sorted s);
+
+** Methods in TreeSet:
+  -------------------
+   1. add(Object o)  -------> add the specified element
+   2. addAll(Colletion c)  -------> add the elementts of the collection
+   3. ceiling(Element e)  -------> returns the least element in the Set or NULL if there is no such element
+   4. clear()  -------> remove all the elements
+   5. clone()  -------> copy of the Set
+   6. Comparator comparator()  -------> return the Compartor used to Sort the TreeSet element
+   7. contains(Object o)  -------> return TRUE if the elements
+   8. descendingIterator()  -------> returns an iterator over the elements in this set in descending order
+   9. descendingSet()  -------> returns an iterator over the elements in this set in descending order
+  10. first()  -------> return FIRST element of the Tree Set
+  11. floor()  -------> return Greatest Element in the Tree Set
+  12. headSet(Object toElement)  -------> returns the elemets of TreeSet, less than Specified Elements
+  13. higher(Element e)  -------> return least element, strictly greater than element or NULL 
+  14. isEmpty() 
+  15. Iterator iterator()
+  16. last()  -------> return last element of the TreeSet
+  17. lower(Element e)  -------> return Greatest elementin the Set, strictly less than the given elements
+  18. pollFirst()  -------> removes first(lowest) element
+  19. pollLast()  -------> removes last(highest) element
+  20. remove(Object o) 
+  21. size()
+  22. subSet(Object fromElement, Object toElement)  -------> return RANGING fromElement to toElement
+  23. tailSet(Object fromElement)  -------> return Elements from Set, which are greater than the specified element
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                                Map Interface
+                                                                -------------
+
+** Map interface present in the JAVA.UTIL package
+** It is not extending Collection Interface, So it is different than Collection Interface
+                                              
+** Conatins Key Vlaue pairs.
+** Cannot contain Duplicate Key
+** HashMap and LinkedHashMap allows NULL key and value BUT NOT TreeMap
+
+** Map(interface)   <---------------(EXTENDS) SortedMap(interface)
+          ^
+          |
+          |
+          |
+     (IMPLEMENTS)
+    HashMap(class)     & LinkedHashMap(class)
+    
+**  Commons Methods in MAP Interface:
+    ---------------------------------
+    1. clear()  ------> clear the mapping elements
+    2. containsKey()  ------> return TRUE, if specified element contains key
+    3. containsValue(Object)  ------> check whether specified element Object is present or not
+    4. entrySet()  ------> used to create a Set out of same elements
+    5. equls(Object)  ------> used to check equality
+    6. get(Object)  ------> used to get value of mapped by particular key
+    7. hashCode()  ------> used to generate the hashcode
+    8. isEmpty()  
+    9. keySet()  ------> used to get all the key's in the map
+   10. put(Object, Object)
+   11. putAll(map)
+   12. remove(Object)
+   13. size()
+   14. values()
+  
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                          HashMap
+                                                          -------
+                                                          
+   
+   
+                                  

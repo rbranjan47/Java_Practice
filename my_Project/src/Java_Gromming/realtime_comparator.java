@@ -83,7 +83,7 @@ class realtime_comparator
 		list.add(new employee("mark", 2005, 11, 40000));
 		list.add(new employee("stonis", 2007, 91, 32000));
 		list.add(new employee("sami", 2015, 101, 27000));
-		list.add(new employee("ronald", 2021, 101, 18000));
+		list.add(new employee("ronald", 2021, 101, 15000));
 		
 		
 		/* by iterator

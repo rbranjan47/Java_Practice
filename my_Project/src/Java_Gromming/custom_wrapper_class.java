@@ -38,6 +38,18 @@ public class custom_wrapper_class
 		System.out.println(value);
 		//data-type
 		System.out.println(((Object)value).getClass().getSimpleName());
+		
+		//substring
+		String substring_demo = "$450.60";
+		String subsstring_part = substring_demo.substring(1);
+		//converting integer
+		double substring_double_demo = Double.valueOf(subsstring_part);
+		System.out.println(subsstring_part);
+		System.out.println(substring_double_demo);
+		
+		//type of
+        System.out.println(subsstring_part.getClass().getTypeName());
+        System.out.println(((Object)substring_double_demo).getClass().getSimpleName());
 	}
 	
 }
