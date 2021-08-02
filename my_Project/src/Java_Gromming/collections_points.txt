@@ -324,7 +324,7 @@ Where Increment capacity, 2n
 ** Objects are sorted and Showing in the ASCENDING order
 ** Doesn't maintain Insertion Order
 ** Doesn't accept Heterogenous Objects
-** Doesn't allows NULL, throws NullPointerException
+** Doesn't allows NULL, otherwise throws NullPointerException
 
 
 * Constructors of TreeSet Class:
@@ -401,6 +401,141 @@ Where Increment capacity, 2n
                                                           HashMap
                                                           -------
                                                           
+** present in the java.util package
+** HashMap is similar to HashTable but is UNSYNCHRONIZED
+** allows only 1 NULL key
+
+** implements marker interface like Serializable, Cloneable iterfaces.
+
+
+--------public class HashMap<k, v> extends AbstractMap<k, v> implements Map<k, v> , Serializable, Cloneable--------
+
+** Constructor:
+----------------
+   a. HasMap<k,v> map = new HashMap<k, v>();
+   b. HasMap<k,v> map = new HashMap<k, v>(int intial_capacity);
+   c. HasMap<k,v> map = new HashMap<k, v>(int intial_capacity,float load_factor);
+   d. HasMap<k,v> map = new HashMap<k, v>(Map map);
+
    
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                          HashTable
+                                                          ---------
+
+** HashTable class implements hash table, which maps keys to value
+** Any non-null object can be used as keys or value
+
+** Similar to HashMap but SYNOCHRONIZED
+** Stores key value pairs in hash table
+** Key is hashed, Cause indexing based on Hash 
+** Don't accept null value
+** HashMap doesn't provie ENUMERATIONS, while Hashtable provide not fail-fast Enumerations.
+
+** Constructor:
+----------------
+   a. Hastable<k,v> map = new Hastable<k, v>();
+   b. Hastable<k,v> map = new Hastable<k, v>(int intial_capacity);
+   c. Hastable<k,v> map = new Hastable<k, v>(int intial_capacity,float fill_ratio);
+   d. Hastable<k,v> map = new Hastable<k, v>(Map map);
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                          LinkedHashMap
+                                                          -------------
+
+** Like HashMap, just in order to maintain Order of the Map.
+** HashMap provides INSERTION, DELETION but doesnot maintain Insertion order, LinkedHashMap provides the 
+   access of the elements.
    
-                                  
+** implements Map interface and extends HashMap class.
+** It contains only unique elements
+** It have only 1 NULL values and multiple NULL values.
+** NON-SYNCHRONIZED
+
+
+
+--- public class LinkedHashMap<k, v) extends HashMap<k, v> implements Map<k, v>----
+ 
+ 
+ ** 5 Constructors:
+ ------------------
+     a. LinkedHasMap<k,v> map = new LinkedHasMap<k, v>();
+     b. LinkedHasMap<k,v> map = new LinkedHasMap<k, v>(int intial_capacity);
+     c. LinkedHasMap<k,v> map = new LinkedHasMap<k, v>(int intial_capacity,float load_factor);
+     d. LinkedHasMap<k,v> map = new LinkedHasMap<k, v>(Map map);  
+     e. LinkedHashMap<k,v> map = new LinkedHashMap<k,v>(int intial_capacity, float fill_ratio, boolean order);
+     
+** Implementation is very similar to DOUBLY-LINKED LIST.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                          SortedMap Interface
+                                                          -------------------
+**  extends Map interface
+**  provides a total ordering of its elements
+**  Provieds natural ordering or by COMPARATOR, to sort
+
+** NULL, key and value are not accepted
+
+** Sub-Interfaces are CONCURRENTNAVIGABLEMAP<k,v>, NAVIGABLEMAP<k,v>
+
+** Sorted Map is implmented by TREEMAP & CONCURRENTSKIPLISTMAP
+
+**** 
+     public interface SortedMap<k,v> extends Map<k,v>
+     {
+     Comparator comparator();
+     SortedMap sub_map(k fromKey, k toKey);
+     SortedMap head_map(k toKey);
+     k firstKey();
+     k lastKey();
+     }
+     
+** Methods in SortedMao Interface:
+----------------------------------
+    a. comparator()  -----> return ordering the keys or NULL if natural order is there
+    b. entrySet()  -----> return the Set view of mapping
+    c. firstKey()  -----> return tje first(lowest) key from map
+    d. headMap(k toKey)  -----> return the portion of the map, whose value less than Given
+    e. keySet()  -----> return set view of key's map
+    f. lastKey()  -----> return the last(heighest) key 
+    g. subMap(k fromKey, k toKey)  -----> from_Key(inclusive) to to_Key(last to_Key Exclusive)
+    h. tailMap(k fromKey)  -----> all keys and values whose value is greater than or equal to
+    i. values()  -----> return a Collection of the values in the map
+    
+    
+ ** METHODS INHERITED FROM MAP INTERFACE:
+    ------------------------------------
+      1. clear()  ------> clear the mapping elements
+      2. containsKey()  ------> return TRUE, if specified element contains key
+      3. containsValue(Object)  ------> check whether specified element Object is present or not
+      4. entrySet()  ------> used to create a Set out of same elements
+      5. equls(Object)  ------> used to check equality
+      6. get(Object)  ------> used to get value of mapped by particular key
+      7. hashCode()  ------> used to generate the hashcode
+      8. isEmpty()  
+      9. keySet()  ------> used to get all the key's in the map
+     10. put(Object, Object)
+     11. putAll(map)
+     12. remove(Object)
+     13. size()
+     14. values()
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                          TreeMap Class
+                                                          -------------
+
+** TreeMap is used to implement Map interface and NavigableMap, along with the Abstract Class
+** Map is sorted by Natural order OR by the comparator provided at the time of MAP Creation
+
+** Not-Synchronized                                                     
+
+** implements Map Interface, NavigableMap, SortedMap
+** NULL not accepted, otherwise NULLPOINTER exception
+
+** Doesn't support Entry.setValue() method.
+
+
+
+
+
+
+                                                                              
