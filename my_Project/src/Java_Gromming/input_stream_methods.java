@@ -52,7 +52,7 @@ public class input_stream_methods
 		}
 		finally
 		{
-			if(data!=null)
+			if(data != null)
 			{
 				data.close();
 			}

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="endTOend_raBiProject.assignleave_test">
+      <class name="rough.ApplitToolDemo">
         <methods>
-          <include name="exitup"/>
-          <include name="setup"/>
-          <include name="leave_assign"/>
+          <include name="afterEach"/>
+          <include name="beforeEach"/>
+          <include name="basicTest"/>
         </methods>
-      </class> <!-- endTOend_raBiProject.assignleave_test -->
+      </class> <!-- rough.ApplitToolDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

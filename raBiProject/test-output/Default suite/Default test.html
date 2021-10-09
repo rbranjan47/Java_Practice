@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 23 06:50:18 IST 2021</td>
+<td>Started on:</td><td>Fri Sep 17 01:44:20 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>36 seconds (36220 ms)</td>
+<tr><td>Total time:</td><td>9 seconds (9925 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,31 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='endTOend_raBiProject.assignleave_test.leave_assign()'><b>leave_assign</b><br>Test class: endTOend_raBiProject.assignleave_test</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input id=&quot;assignleave_txtToDate&quot; type=&quot;text&quot; name=&quot;assignleave[txtToDate]&quot; class=&quot;calendar hasDatepicker&quot;&gt; is not clickable at point (275, 413). Other element would receive the click: &lt;div class=&quot;ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=91.0.4472.164)
-Build info: version: &apos;4.0.0-beta-3&apos;, revision: &apos;5d108f9a67&apos;
-System info: host: &apos;LAPTOP-HSQD46T4&apos;, ip: &apos;192.168.225.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [100abccceabd53f097f6b1d10b886ac3, clickElement {id=2ae0640e-e2cf-4a26-92a9-ceb29ed504d9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\rbran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51985}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51985/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (100abccceabd53f097f6b1d10b886ac3)] -&gt; xpath: //input[@id=&apos;assignleave_txtToDate&apos;]]
-Session ID: 100abccceabd53f097f6b1d10b886ac3
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:198)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:153)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:128)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:619)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:237)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:75)
-	at endTOend_raBiProject.assignleave_test.leave_assign(assignleave_test.java:152)
+<td title='rough.ApplitToolDemo.basicTest()'><b>basicTest</b><br>Test class: rough.ApplitToolDemo</td>
+<td><div><pre>com.applitools.eyes.exceptions.TestFailedException: Failed to set the viewport size
+	at com.applitools.eyes.selenium.SeleniumEyes.setViewportSize(SeleniumEyes.java:1540)
+	at com.applitools.eyes.EyesBase.ensureViewportSize(EyesBase.java:1143)
+	at com.applitools.eyes.EyesBase.prepareForOpen(EyesBase.java:868)
+	at com.applitools.eyes.RunningTest.prepareForOpen(RunningTest.java:44)
+	at com.applitools.eyes.EyesBase.openBase(EyesBase.java:890)
+	at com.applitools.eyes.selenium.SeleniumEyes.open(SeleniumEyes.java:318)
+	at com.applitools.eyes.selenium.SeleniumEyes.open(SeleniumEyes.java:282)
+	at com.applitools.eyes.selenium.Eyes.open(Eyes.java:145)
+	at rough.ApplitToolDemo.basicTest(ApplitToolDemo.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -128,31 +114,21 @@ Session ID: 100abccceabd53f097f6b1d10b886ac3
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1872034717", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1872034717'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input id=&quot;assignleave_txtToDate&quot; type=&quot;text&quot; name=&quot;assignleave[txtToDate]&quot; class=&quot;calendar hasDatepicker&quot;&gt; is not clickable at point (275, 413). Other element would receive the click: &lt;div class=&quot;ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=91.0.4472.164)
-Build info: version: &apos;4.0.0-beta-3&apos;, revision: &apos;5d108f9a67&apos;
-System info: host: &apos;LAPTOP-HSQD46T4&apos;, ip: &apos;192.168.225.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [100abccceabd53f097f6b1d10b886ac3, clickElement {id=2ae0640e-e2cf-4a26-92a9-ceb29ed504d9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.164, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\rbran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51985}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51985/devtoo..., se:cdpVersion: 91.0.4472.164, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (100abccceabd53f097f6b1d10b886ac3)] -&gt; xpath: //input[@id=&apos;assignleave_txtToDate&apos;]]
-Session ID: 100abccceabd53f097f6b1d10b886ac3
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:198)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:153)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:128)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:619)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:237)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:75)
-	at endTOend_raBiProject.assignleave_test.leave_assign(assignleave_test.java:152)
+Caused by: com.applitools.eyes.EyesException: Failed to set viewport size!
+	at com.applitools.eyes.selenium.EyesDriverUtils.setViewportSize(EyesDriverUtils.java:551)
+	at com.applitools.eyes.selenium.SeleniumEyes.setViewportSize(SeleniumEyes.java:1534)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1673389762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1673389762'><pre>com.applitools.eyes.exceptions.TestFailedException: Failed to set the viewport size
+	at com.applitools.eyes.selenium.SeleniumEyes.setViewportSize(SeleniumEyes.java:1540)
+	at com.applitools.eyes.EyesBase.ensureViewportSize(EyesBase.java:1143)
+	at com.applitools.eyes.EyesBase.prepareForOpen(EyesBase.java:868)
+	at com.applitools.eyes.RunningTest.prepareForOpen(RunningTest.java:44)
+	at com.applitools.eyes.EyesBase.openBase(EyesBase.java:890)
+	at com.applitools.eyes.selenium.SeleniumEyes.open(SeleniumEyes.java:318)
+	at com.applitools.eyes.selenium.SeleniumEyes.open(SeleniumEyes.java:282)
+	at com.applitools.eyes.selenium.Eyes.open(Eyes.java:145)
+	at rough.ApplitToolDemo.basicTest(ApplitToolDemo.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,9 +157,13 @@ Session ID: 100abccceabd53f097f6b1d10b886ac3
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.applitools.eyes.EyesException: Failed to set viewport size!
+	at com.applitools.eyes.selenium.EyesDriverUtils.setViewportSize(EyesDriverUtils.java:551)
+	at com.applitools.eyes.selenium.SeleniumEyes.setViewportSize(SeleniumEyes.java:1534)
+	... 36 more
 </pre></div></td>
-<td>25</td>
-<td>endTOend_raBiProject.assignleave_test@55562aa9</td></tr>
+<td>7</td>
+<td>rough.ApplitToolDemo@5562c41e</td></tr>
 </table><p>
 </body>
 </html>
