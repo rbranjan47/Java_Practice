@@ -1,0 +1,13 @@
+* TestNG is a Unit testing framework like JUnit.
+* TestNG has multiple class and interface and methods.
+* TestNG provides so many additional functionality using then to create robust framework.
+
+** Advantage:
+1. Default Reproting
+2. Annotations
+3. Run your tests in arbitrarily big thread pools
+4. Easy and flexible test configuration
+5. Support data-driven testing
+6. Support for parameters
+7. Easy way to execute Test Suites
+8. Supported by a variety of tools and plugins.
