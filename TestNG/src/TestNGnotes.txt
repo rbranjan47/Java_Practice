@@ -3,6 +3,8 @@
 * TestNG provides so many additional functionality using then to create robust framework.
 
 ** Advantage:
+-----------------
+
 1. Default Reproting
 2. Annotations
 3. Run your tests in arbitrarily big thread pools
