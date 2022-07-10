@@ -10,14 +10,18 @@ import org.openqa.selenium.logging.LogType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class consoleLogsUdemy {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
 
 		driver.get("https://qa.myresman.com/");
-		driver.findElement(By.id("Username")).sendKeys("sjadmin");
-		driver.findElement(By.id("Password")).sendKeys("tester2");
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		driver.get("https://qa.myresman.com/");
+		driver.findElement(By.id("Username")).sendKeys("avadmin");
+		driver.findElement(By.id("Password")).sendKeys("tester");
+		driver.findElement(By.xpath("//button[contains(text(),'Sign in')]")).click();
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 
 		LogEntries entry = driver.manage().logs().get(LogType.BROWSER);
 		//storing al logs in list

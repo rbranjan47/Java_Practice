@@ -14,12 +14,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class ScreenShot_Webelement 
 {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args)  throws InterruptedException, IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "F:\\chromedriver\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

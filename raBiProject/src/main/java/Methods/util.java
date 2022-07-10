@@ -93,8 +93,8 @@ public class util extends base_class {
 		proper.put("mail.smtp.auth", authen_status);
 
 		// getting the session object and pass the username and password
-		String username_smtp = properties.getProperty("from_gmail_email");
-		String password_smtp = properties.getProperty("from_gmail_pass");
+		final String username_smtp = properties.getProperty("from_gmail_email");
+		final String password_smtp = properties.getProperty("from_gmail_pass");
 
 		// TLS authentication
 		Authenticator auth = new Authenticator() {
@@ -128,7 +128,7 @@ public class util extends base_class {
 	}
 
 	// sending mail with attchements
-	public void smtp_attachements_emails(String toEmail, String username, String password, String fromEmail,
+	public void smtp_attachements_emails(String toEmail, final String username, final String password, String fromEmail,
 			String subject, String body) throws AddressException, MessagingException {
 		Properties proper = System.getProperties();
 		// host

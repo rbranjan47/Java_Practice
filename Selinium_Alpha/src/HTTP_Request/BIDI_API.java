@@ -43,3 +43,5 @@ public class BIDI_API {
 		
 	}
 }
+//extentTest.get().fail("<details><summary><b><font color='red'>" + "Exception Occured!" + "</font></b></summary>"
+//+ throwable_message.replaceAll(",", "<br>") + "</details> \n");
