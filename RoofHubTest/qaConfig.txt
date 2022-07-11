@@ -1,0 +1,4 @@
+Application_url=https://qa.roofhub.pro
+Username= singh.rishabh+05@thinksys.com
+Password=Rishabh@123
+Browser= chrome

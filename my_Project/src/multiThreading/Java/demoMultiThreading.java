@@ -34,5 +34,4 @@ package multiThreading.Java;
 
 public class demoMultiThreading {
 
-	
 }

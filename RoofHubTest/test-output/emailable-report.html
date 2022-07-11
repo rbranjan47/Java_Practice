@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">383,024</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.roofhub.qa.TestCases.OrderPageTest</td><td><a href="#m0">verifyCancelOrder</a></td><td rowspan="1">1648818813952</td><td rowspan="1">4</td></tr><tr class="failedeven"><td><a href="#m1">verifyplaceorder</a></td><td rowspan="1">1648818745550</td><td rowspan="1">20048</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.roofhub.qa.TestCases.LoginPageTest</td><td><a href="#m2">verifyloginwithinvalidcredentials</a></td><td rowspan="1">1648818590706</td><td rowspan="1">1571</td></tr><tr class="passedeven"><td><a href="#m3">verifyloginwithvalidcredentials</a></td><td rowspan="1">1648818636341</td><td rowspan="1">9448</td></tr><tr class="passedeven"><td><a href="#m4">verifylogout</a></td><td rowspan="1">1648818690410</td><td rowspan="1">10821</td></tr><tr class="passedodd"><td rowspan="1">com.roofhub.qa.TestCases.RegisterPageTest</td><td><a href="#m5">verifyRegistration</a></td><td rowspan="1">1648818864543</td><td rowspan="1">63031</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">com.roofhub.qa.TestCases.OrderPageTest#verifyCancelOrder</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ClassCastException: java.lang.ThreadLocal cannot be cast to org.openqa.selenium.JavascriptExecutor
+	at com.roofhub.qa.TestCases.OrderPageTest.verifyCancelOrder(OrderPageTest.java:147)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.roofhub.qa.TestCases.OrderPageTest#verifyplaceorder</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;order-wizard&apos;]/div/div[8]/div/div[@class=&apos;col-12 col-lg-8 mb-3 order-1&apos;]/div/div[6]/div[@class=&apos;col-12&apos;]/div/select[@class=&apos;form-control select-no-margin&apos;]&quot;}
+  (Session info: chrome=100.0.4896.60)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-MLRUPTU&apos;, ip: &apos;10.101.23.129&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\THINKS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61339}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f7320ea18d3cdc9cd389858b915bf50
+*** Element info: {Using=xpath, value=//div[@id=&apos;order-wizard&apos;]/div/div[8]/div/div[@class=&apos;col-12 col-lg-8 mb-3 order-1&apos;]/div/div[6]/div[@class=&apos;col-12&apos;]/div/select[@class=&apos;form-control select-no-margin&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy11.getTagName(Unknown Source)
+	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:44)
+	at com.roofhub.qa.pages.NewOrderPage2.selectJobAccount(NewOrderPage2.java:81)
+	at com.roofhub.qa.TestCases.OrderPageTest.verifyplaceorder(OrderPageTest.java:92)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.roofhub.qa.TestCases.LoginPageTest#verifyloginwithinvalidcredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.roofhub.qa.TestCases.LoginPageTest#verifyloginwithvalidcredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.roofhub.qa.TestCases.LoginPageTest#verifylogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.roofhub.qa.TestCases.RegisterPageTest#verifyRegistration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
