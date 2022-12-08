@@ -41,7 +41,7 @@ public class bacTrack {
 		WebElement ele = driver.findElement(By.className("js-activity-filter"));
 		Select sel = new Select(ele);
 		sel.selectByValue("Inactive");
-		
+
 		loaderWait();
 		List<WebElement> emails = driver
 				.findElements(By.xpath("//table[@class='js-table-view-table']/tbody/tr/td[1]/span[2]"));

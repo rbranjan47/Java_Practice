@@ -21,15 +21,14 @@ public class geoLocations {
 		options.addArguments("test-type");
 		options.addArguments("enable-strict-powerful-feature-restrictions");
 		options.addArguments("disable-geolocation");
-		
-	
+
 		ChromeDriver driver = new ChromeDriver(options);
-		
+
 		// CDP
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
 
-		//storing latiude, longitude, and accuracy in Map and sending 	
+		// storing latiude, longitude, and accuracy in Map and sending
 		Map<String, Object> coordinates = new HashMap<String, Object>();
 		coordinates.put("latitude", 40);
 		coordinates.put("longitude", 3);
@@ -41,12 +40,11 @@ public class geoLocations {
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("netflix");
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(Keys.ENTER);
 		driver.findElements(By.cssSelector(".LC20lb")).get(0).click();
-		
+
 		List<WebElement> titleTexts = driver.findElements(By.cssSelector(".our-story-card-title"));
-		for(int i=0; i<titleTexts.size(); i++) {
+		for (int i = 0; i < titleTexts.size(); i++) {
 			System.out.println(titleTexts.get(i).getText());
 		}
-		
-		
+
 	}
 }

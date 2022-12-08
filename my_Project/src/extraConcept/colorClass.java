@@ -5,8 +5,10 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class colorClass extends JFrame {
 	// constructor
+	@SuppressWarnings("deprecation")
 	colorClass() {
 		super("color");
 
@@ -23,6 +25,7 @@ public class colorClass extends JFrame {
 	}
 
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		colorClass c = new colorClass();
 	}
 }

@@ -24,10 +24,10 @@ public class consoleLogsUdemy {
 		Thread.sleep(5000);
 
 		LogEntries entry = driver.manage().logs().get(LogType.BROWSER);
-		//storing al logs in list
-		List<org.openqa.selenium.logging.LogEntry>logs = entry.getAll();
-		
-		for(org.openqa.selenium.logging.LogEntry consoleLogs : logs) {
+		// storing al logs in list
+		List<org.openqa.selenium.logging.LogEntry> logs = entry.getAll();
+
+		for (org.openqa.selenium.logging.LogEntry consoleLogs : logs) {
 			System.out.println(consoleLogs.getMessage());
 			System.out.println(consoleLogs.getTimestamp());
 		}

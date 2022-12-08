@@ -14,42 +14,41 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class networkResponseAPI {
 	public static void main(String[] args) {
-		
+
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
-		
-		//Chrome devtools
+
+		// Chrome devtools
 		DevTools devtools = driver.getDevTools();
-		//creating sesssion
+		// creating sesssion
 		devtools.createSession();
-		
-		//Enabling network
+
+		// Enabling network
 		devtools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-		
-		//disable network
-		//devtools.send(Network.disable());
-		
-		//getting sent request
-		devtools.addListener(Network.requestWillBeSent(), request->{
+
+		// disable network
+		// devtools.send(Network.disable());
+
+		// getting sent request
+		devtools.addListener(Network.requestWillBeSent(), request -> {
 			Request req = request.getRequest();
 			System.out.println(req.getUrl());
 		});
-		
-		
-		//firing event
-		devtools.addListener(Network.responseReceived(), response->{
+
+		// firing event
+		devtools.addListener(Network.responseReceived(), response -> {
 			Response res = response.getResponse();
-			System.out.println("Status: "+ res.getStatus());
-			if(res.getStatus().toString().startsWith("4")) {
-				System.out.println(res.getUrl() + "failed with status code "+ res.getStatus());
+			System.out.println("Status: " + res.getStatus());
+			if (res.getStatus().toString().startsWith("4")) {
+				System.out.println(res.getUrl() + "failed with status code " + res.getStatus());
 			}
 			System.out.println("url: " + res.getUrl());
-			System.out.println("Status Text: "+ res.getStatusText());
+			System.out.println("Status Text: " + res.getStatusText());
 		});
-		
+
 		driver.get("https://www.google.com/");
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("chrome devtools");
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(Keys.ENTER);
-		
+
 	}
 }

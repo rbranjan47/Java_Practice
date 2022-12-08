@@ -16,23 +16,22 @@ public class shadowElements {
 			WebDriverManager.chromedriver().setup();
 			WebDriver driver = new ChromeDriver();
 			driver.get("https://books-pwakit.appspot.com/");
-			
-			//Shadow Elements -----> Java-Script Executor
+
+			// Shadow Elements -----> Java-Script Executor
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			WebElement input = (WebElement) (js.executeScript("return document.querySelector(\"body > book-app\")"
-					+ ".shadowRoot"
-					+".querySelector(\"input\")"));
-			
+					+ ".shadowRoot" + ".querySelector(\"input\")"));
+
 			input.sendKeys("Ravinder Singh");
 			input.sendKeys(Keys.ENTER);
-			
+
 			Thread.sleep(5000);
-			
+
 			driver = (ChromeDriver) driver;
 			driver.close();
 			driver.quit();
 		} catch (Exception e) {
-			throw e; 
+			throw e;
 		}
 	}
 }

@@ -44,65 +44,63 @@ public class roofHub {
 		yearOnClick.click();
 
 		List<WebElement> yearsList = driver.findElements(By.xpath("//span[@class='cell year']"));
-		//span[@class='cell year']  --> xpath for years
-		// div[@class='vdp-datepicker__calendar']  --> xpath for whole column
+		// span[@class='cell year'] --> xpath for years
+		// div[@class='vdp-datepicker__calendar'] --> xpath for whole column
 
 		int yearSize = yearsList.size();
 		for (int i = 0; i < yearSize; i++) {
 			String yearValue = yearsList.get(i).getText();
-			
+
 			if (yearValue.equalsIgnoreCase("2022")) {
 				yearsList.get(i).click();
 				break;
 			}
 		}
-		
+
 		List<WebElement> monthsList = driver.findElements(By.xpath("//span[@class='cell month']"));
 		int monthSize = yearsList.size();
 		for (int i = 0; i < monthSize; i++) {
 			String monthValue = monthsList.get(i).getText();
-		
+
 			if (monthValue.equalsIgnoreCase("january")) {
 				monthsList.get(i).click();
 				break;
 			}
 		}
-		
+
 		List<WebElement> weekDaysList = driver.findElements(By.xpath("//span[@class='cell day blank']"));
-		int weekDaySize = weekDaysList.size() ;
+		int weekDaySize = weekDaysList.size();
 		for (int i = 0; i < weekDaySize; i++) {
 			String weekDayValue = weekDaysList.get(i).getText();
-	
 
 			if (weekDayValue.equalsIgnoreCase("30")) {
 				Thread.sleep(3000);
 				weekDaysList.get(i).click();
 				break;
-			} 
+			}
 		}
-			
+
 		List<WebElement> weekendSatList = driver.findElements(By.xpath("//span[@class='cell day weekend sat']"));
 		int weekEndSatDaySize = weekendSatList.size();
 		for (int i = 0; i < weekEndSatDaySize; i++) {
-	   String weekDaySatValue = weekendSatList.get(i).getText();
+			String weekDaySatValue = weekendSatList.get(i).getText();
 
 			if (weekDaySatValue.equalsIgnoreCase("30")) {
 				Thread.sleep(3000);
 				weekendSatList.get(i).click();
 				break;
-			} 
+			}
 		}
 		List<WebElement> weekendSunList = driver.findElements(By.xpath("//span[@class='cell day weekend sun']"));
 		int weekEndSunDaySize = weekendSunList.size();
 		for (int i = 0; i < weekEndSunDaySize; i++) {
 			String weekDaySunValue = weekDaysList.get(i).getText();
-			
 
 			if (weekDaySunValue.equalsIgnoreCase("30")) {
 				Thread.sleep(3000);
 				weekendSunList.get(i).click();
 				break;
-			} 
+			}
 		}
 		/*
 		 * while (!driver .findElement(By.

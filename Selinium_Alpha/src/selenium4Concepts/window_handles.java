@@ -1,4 +1,4 @@
-package Alpha_NewFeatures;
+package selenium4Concepts;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;

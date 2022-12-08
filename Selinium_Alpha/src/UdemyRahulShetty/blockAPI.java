@@ -18,11 +18,11 @@ public class blockAPI {
 
 		DevTools devtools = driver.getDevTools();
 		devtools.createSession();
-		
+
 		devtools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-		
+
 		devtools.send(Network.setBlockedURLs(ImmutableList.of("*.gif*", "*jpg*", "*.png*", "*.jpeg*")));
-		
+
 		driver.get("https://qa.myresman.com/");
 		driver.findElement(By.id("Username")).sendKeys("sjadmin");
 		driver.findElement(By.id("Password")).sendKeys("tester2");

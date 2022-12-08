@@ -13,19 +13,19 @@ public class consoleLogs {
 
 		DevTools devtools = driver.getDevTools();
 		devtools.createSession();
-		
+
 		devtools.send(Log.enable());
-		
-		devtools.addListener(Log.entryAdded(), entries->{
+
+		devtools.addListener(Log.entryAdded(), entries -> {
 			System.out.println(entries.getText());
 			System.out.println(entries.getLevel());
 		});
-		
+
 		driver.get("https://qa.myresman.com/");
 		driver.findElement(By.id("Username")).sendKeys("sjadmin");
 		driver.findElement(By.id("Password")).sendKeys("tester2");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		
+
 		driver.quit();
 	}
 }

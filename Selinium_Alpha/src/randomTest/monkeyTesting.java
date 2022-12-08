@@ -26,7 +26,7 @@ public class monkeyTesting {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		List<WebElement> footerLinks = driver.findElements(By.cssSelector("div.navFooterVerticalRow li a"));
 		// scolling down
-		
+
 		int footerLinksSize = footerLinks.size();
 		System.out.println(footerLinksSize);
 
@@ -34,25 +34,25 @@ public class monkeyTesting {
 		for (int i = 0; i < footerLinksSize; i++) {
 			// Generating random numbers
 			int randomNumber = (int) Math.floor(Math.random() * footerLinksSize);
-			
-			js.executeScript("arguments[0].scrollIntoView(true);", 	footerLinks.get(randomNumber));
+
+			js.executeScript("arguments[0].scrollIntoView(true);", footerLinks.get(randomNumber));
 			Thread.sleep(2000);
-			//footer link texts
+			// footer link texts
 			String footerLinkText = footerLinks.get(randomNumber).getText();
 			try {
 				Assert.assertEquals(true, footerLinks.get(randomNumber).isEnabled());
 				footerLinks.get(randomNumber).click();
-				System.out.println(footerLinkText+" is clickable!");
+				System.out.println(footerLinkText + " is clickable!");
 			} catch (Exception e) {
-				System.out.println(footerLinkText+" is not clickable!");
+				System.out.println(footerLinkText + " is not clickable!");
 			}
-			
+
 			driver.navigate().back();
 
 			Thread.sleep(2000);
 			// Store the same webelement again to not to get StaleElement
 			footerLinks = driver.findElements(By.cssSelector("div.navFooterVerticalRow li a"));
-		
+
 		}
 		driver.close();
 	}

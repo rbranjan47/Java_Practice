@@ -19,7 +19,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.1.0</version>
+			<version>4.6.0</version>
 		</dependency>
 
 
@@ -34,9 +34,9 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.4.0</version>
-			<scope>test</scope>
+			<version>7.6.1</version>
 		</dependency>
+
 
 		<!-- this is AUTOMATION EMAILS dependencies, to add the JAR file-->
 
@@ -92,6 +92,13 @@
 			<groupId>io.github.sukgu</groupId>
 			<artifactId>automation</artifactId>
 			<version>0.1.4.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.github.supersnager/request-response-pattern -->
+		<dependency>
+			<groupId>io.github.supersnager</groupId>
+			<artifactId>request-response-pattern_2.13</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 
 

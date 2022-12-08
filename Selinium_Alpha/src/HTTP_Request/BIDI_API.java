@@ -18,29 +18,29 @@ public class BIDI_API {
 	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		
-		//driver is casting into HasLogEvents class
+
+		// driver is casting into HasLogEvents class
 		HasLogEvents logger = (HasLogEvents) driver;
-		
-		//atomic refrence 
+
+		// atomic refrence
 		AtomicReference<DomMutationEvent> seen = new AtomicReference<>();
-		
+
 		CountDownLatch latch = new CountDownLatch(1);
-		
+
 		logger.onLogEvent((mutation -> {
-		    seen.set((DomMutationEvent) mutation);
-		    latch.countDown();
+			seen.set((DomMutationEvent) mutation);
+			latch.countDown();
 		}));
-		
+
 		driver.get("https://www.google.com");
 		WebElement search = driver.findElement(By.cssSelector("input[type='text']"));
 		Color search_colour = Color.fromString(search.getCssValue("color"));
 		System.out.println(search_colour);
-		
+
 		Thread.sleep(3000);
 		search.sendKeys("google.com");
 		search.sendKeys(Keys.ENTER);
-		
+
 	}
 }
 //extentTest.get().fail("<details><summary><b><font color='red'>" + "Exception Occured!" + "</font></b></summary>"

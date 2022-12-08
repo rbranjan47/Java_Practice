@@ -1,4 +1,5 @@
 package UdemyRahulShetty;
+
 import java.util.Optional;
 
 import org.openqa.selenium.By;
@@ -13,14 +14,15 @@ public class cooridinateCDP {
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
-		
-		//CDP
+
+		// CDP
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
-		
-		devTools.send(Emulation.setDeviceMetricsOverride(400, 650, 100, true, Optional.empty(), Optional.empty(), Optional.empty(), 
-				Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
-		
+
+		devTools.send(Emulation.setDeviceMetricsOverride(400, 650, 100, true, Optional.empty(), Optional.empty(),
+				Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
+				Optional.empty()));
+
 		driver.get("https://www.google.com/");
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("chrome devtools");
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(Keys.ENTER);
