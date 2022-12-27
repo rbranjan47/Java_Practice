@@ -1,11 +1,12 @@
 package extraConcept;
 
 //Interface is defined as Abstract type
-//Interface contains STATIC, CONSTANTS, & ABSTRACT methods
+//Interface contains STATIC, CONSTANTS, FINAL & ABSTRACT methods
 //Interface do not have constructor
 //To achieve total abstraction
 
-//
+//>> Multiple Inheritance
+//>> Loose coupling
 
 public interface interfaceTasks {
 

@@ -1,5 +1,11 @@
 package Java_Gromming;
-
+/*
+ * Encapsulation: Wrapping up of data under a single unit
+ * >> Data Hiding & Abstractions
+ * >> Reuasability
+ * >> Variables are Read only & Write Only, increase flexibility 
+ * >> Easy for unit testing
+ */
 class Encapsulate{
 	//declaring the variables in private and methods in public
 	private  String name;

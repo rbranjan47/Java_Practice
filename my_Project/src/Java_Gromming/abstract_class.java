@@ -1,5 +1,8 @@
 package Java_Gromming;
-
+/*
+ * >> Declared with Abstract Keyword
+ * >> 
+ */
 abstract class base{
 	
 	//constructor of abstract class
