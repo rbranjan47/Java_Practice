@@ -20,8 +20,8 @@ public class matcherFindIntStart {
 
 		Matcher matcher = pattern.matcher(stringToBeMatched);
 
-		System.out.println(matcher.find(6));//false gets orGeeks
+		System.out.println(matcher.find(6));//false gets, orGeeks
 		
-		System.out.println(matcher.find(5));//true gets ForGeeks
+		System.out.println(matcher.find(5));//true gets, ForGeeks
 	}
 }

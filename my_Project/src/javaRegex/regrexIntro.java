@@ -5,6 +5,8 @@ package javaRegex;
  * 
  * >> Used to TEXT SEARCH & TEXT REPLACE
  * 
+ * >> On passing NULL, it give NULLPOINTEREXCEPTION
+ * 
  * >> Import from java.util.regex, includes classes:
  *                            > Pattern  - Used to define pattern
  *                            
@@ -18,12 +20,6 @@ package javaRegex;
  * Pattern.CASE_INSENSITIVE > letter's case ignored while searching
  * Pattern.LITERAL > Special chars treated as ordinary characters while searching
  * Pattern.UNICODE_CASE > Use it together with CASE_INSENSITIVE , to ignore the letters outside of english alphabets
- * 
- * >> Brackets are used to find range:
- * [abc]  > Find 1 character in between brackets
- * [^abc] > Find 1 character, not between the brackets characters
- * [0-9] > Find 1 from the range 0 to 9
- * 
  *   
  */
 import java.util.regex.*;

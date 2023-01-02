@@ -4,10 +4,6 @@ import java.util.regex.*;
 
 /*
  *  >> MetaCharacters: 
- *  | = Find any one of the pattern separated by | as, cat | dog | rat
- *  . = Find just one instance of character
- *  ^ =  Find a match as begining of string like.. ^Hello
- *  $ = Find a match at end of string like.. world$
  *  \d = Find a digit[0-9]
  *  \D = Any non-digit[^0-9]
  *  \s = Find a whitespace character
@@ -16,10 +12,9 @@ import java.util.regex.*;
  *  \W = Any non-word character
  *  \b = Find word boundary
  *  \B = Find Non-Word Boundary
- *  \_u_xxxx (ignore underscore between u)= Find the unicode characters
  * 
  */
-public class regexMetaCharacters {
+public class regexMetaCharactersI {
 	public static void main(String[] args) {
 		System.out.println("Digit metacharacters d..." + Pattern.matches("\\d", "abc"));// flase
 		System.out.println("Digit metacharacters d..." + Pattern.matches("\\d", "6"));// true
