@@ -20,9 +20,13 @@ public class characterClassesSECOND {
 		// [a-z&&[^bc]]
 		System.out.println("[a-z&&[^bc]]  matches: " + Pattern.matches("[a-z&&[^bc]]", "d")); // true
 		System.out.println("[a-z&&[^bc]]  matches: " + Pattern.matches("[a-z&&[^bc]]", "b")); // false
-		
+
 		// [a-z&&[^m-p]]
 		System.out.println("[a-z&&[^m-p]] matches: " + Pattern.matches("[a-z&&[^m-p]]", "d")); // true
 		System.out.println("[a-z&&[^m-p]] matches: " + Pattern.matches("[a-z&&[^m-p]]", "o")); // false
+
+		// check with N characters
+		System.out.println(Pattern.matches("[a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z]", "rabi"));//true
+		System.out.println(Pattern.matches("[a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z]", "ranjan"));//false, more than 4 characters
 	}
 }

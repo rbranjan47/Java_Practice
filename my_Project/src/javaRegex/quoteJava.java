@@ -7,7 +7,7 @@ package javaRegex;
  *    
  *    > Parameter: Accepts string parameter, that literalized
  *    
- *    > Return a literak string replacement for string
+ *    > Return a literal string replacement for string
  */
 
 import java.util.regex.*;
