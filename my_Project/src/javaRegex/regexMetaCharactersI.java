@@ -30,8 +30,8 @@ public class regexMetaCharactersI {
 																								// characters
 
 		System.out.println("Non-space metacharacters S..." + Pattern.matches("\\S", " "));// false
-		System.out.println("Non-space metacharacters S..." + Pattern.matches("\\S", "1"));// true, character but
-																							// non-white space
+		System.out.println("Non-space metacharacters S..." + Pattern.matches("\\S", "1"));// true, character but non-white space
+																							
 
 		System.out.println("A word metacharacters w..." + Pattern.matches("\\w", "a"));// true
 		System.out.println("A word metacharacters w..." + Pattern.matches("\\w", "aAa"));// false

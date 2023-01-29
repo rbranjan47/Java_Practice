@@ -140,11 +140,12 @@ public class stringMatcherCreatedI {
 		System.out.println(stringMatches.containsSSNNumber("abc-65-9832"));// false
 
 		// extract matches words
-		System.out.println(StringMatcher.extractSpecificText("(\\brat\\b|\\bfish\\b|\\bcrabs\\b)",
-				"dog, cat, fish, crabs, and rat are animals."));
+		List<String> extractedText = StringMatcher.extractSpecificText("(\\brat\\b|\\bfish\\b|\\bcrabs\\b)",
+				"extract which are not animals dog, cat, fish, crabs, and rat.");
+		System.out.println("Are not animals: "+extractedText);
 
 		// validate username
-		System.out.println(stringMatches.validateUsername("testuser97"));// true
+		System.out.println(stringMatches.validateUsername("sa47"));// true
 		System.out.println(stringMatches.validateUsername("testuser-97"));// true
 		System.out.println(stringMatches.validateUsername("testuser_97"));// true
 		System.out.println(stringMatches.validateUsername("testuser"));// true
