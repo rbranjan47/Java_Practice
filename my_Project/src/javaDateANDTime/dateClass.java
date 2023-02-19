@@ -60,11 +60,9 @@ public class dateClass {
 		System.out.println(d6);
 
 		Date datesMethods = new Date();
-		System.out.println(datesMethods.after(d4)); // true, since Sun Feb 19 22:09:43 IST 2023 AFTER Fri Oct 31
-													// 02:05:00 IST 1997
+		System.out.println(datesMethods.after(d4)); // true, since Sun Feb 19 22:09:43 IST 2023 AFTER Fri Oct 31 02:05:00 IST 1997
 
-		System.out.println(datesMethods.before(d5)); // false, since Sun Feb 19 22:09:43 IST 2023 NOT BEFORE Fri Oct 31
-														// 02:05:00 IST 1997
+		System.out.println(datesMethods.before(d5)); // false, since Sun Feb 19 22:09:43 IST 2023 NOT BEFORE Fri Oct 31 02:05:00 IST 1997
 
 		System.out.println(datesMethods.compareTo(d4));
 		System.out.println(datesMethods.compareTo(d6));
