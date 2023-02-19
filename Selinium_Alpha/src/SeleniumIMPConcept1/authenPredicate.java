@@ -1,4 +1,4 @@
-package UdemyRahulShetty;
+package SeleniumIMPConcept1;
 
 import org.openqa.selenium.HasAuthentication;
 import org.openqa.selenium.UsernameAndPassword;

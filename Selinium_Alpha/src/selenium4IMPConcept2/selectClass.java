@@ -1,4 +1,4 @@
-package selenium4Concepts;
+package selenium4IMPConcept2;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

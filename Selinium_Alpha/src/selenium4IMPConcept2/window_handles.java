@@ -1,4 +1,4 @@
-package selenium4Concepts;
+package selenium4IMPConcept2;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;

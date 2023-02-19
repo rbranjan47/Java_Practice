@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  *    > Used to get the number of capturing groups
  *    
  */
-public class mactherGroupCount {
+public class matcherGroupCount {
 	public static void main(String[] args) {
 		String regexWord = "(hello) | (this) | (world)";
 
