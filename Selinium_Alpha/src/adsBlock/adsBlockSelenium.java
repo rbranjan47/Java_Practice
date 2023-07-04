@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class adsBlockSelenium {
 
 	@Test
-	public void adsBlocksUsingExtensions() {
+	public void adsBlocksUsingExtensions() throws InterruptedException {
 		// Issue with chrome launch websocket
 		ChromeOptions co = new ChromeOptions();
 		co.addArguments("--remote-allow-origins=*");
@@ -22,6 +22,9 @@ public class adsBlockSelenium {
 		WebDriver driver = new ChromeDriver(co);
 		driver.manage().window().maximize();
 		driver.get("https://www.javatpoint.com/java-tutorial");
+		
+		Thread.sleep(20000);
+		driver.quit();
 
 	}
 }
