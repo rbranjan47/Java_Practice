@@ -1,4 +1,4 @@
-//WAJP to count and print how many alphabet digit and special characters  present in the String?
+ //WAJP to count and print how many alphabet digit and special characters  present in the String?
 
 package Practice;
 

@@ -21,6 +21,6 @@ public class authenPredicate {
 		// casting driver into HasAuthentication
 		((HasAuthentication) driver).register(uriPredicate, UsernameAndPassword.of("foo", "bar"));
 		driver.get("http://httpbin.org/basic-auth/foo/bar");
-
+		
 	}
 }

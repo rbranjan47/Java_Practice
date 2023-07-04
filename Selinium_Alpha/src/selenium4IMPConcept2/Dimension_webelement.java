@@ -9,13 +9,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.manager.SeleniumManager;
 
 public class Dimension_webelement {
 
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "F:\\chromedriver\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		//https://www.youtube.com/watch?v=YMvb1xbc2LU
+		ChromeOptions chromeoptions = new ChromeOptions();
+		chromeoptions.addArguments("--remote-allow-origins=*");
+		String chromePath = SeleniumManager.getInstance().getDriverPath("chromedriver");
+		System.setProperty("webdriver.chrome.driver", chromePath);
+		WebDriver driver = new ChromeDriver(chromeoptions);
 
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
