@@ -60,7 +60,7 @@ public class reverseString {
 		return strBuilder.toString();
 	}
 	
-	//METHOD 4: Reverse using ForLoop Method
+	//METHOD 4: Reverse using ForLoop Methods
 	public static String strnsLoopstrnsLoop(String strnss) {
 		String strnsLoop="";
 		char[] charStrnss = strnss.toCharArray();
