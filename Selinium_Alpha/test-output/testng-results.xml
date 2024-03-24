@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-05T02:34:40 IST" name="Default suite" finished-at="2023-07-05T02:35:25 IST" duration-ms="44896">
+  <suite started-at="2024-03-06T01:35:16 IST" name="Default suite" finished-at="2024-03-06T01:35:36 IST" duration-ms="19903">
     <groups>
     </groups>
-    <test started-at="2023-07-05T02:34:40 IST" name="Default test" finished-at="2023-07-05T02:35:25 IST" duration-ms="44896">
-      <class name="adsBlock.adsBlockSelenium">
-        <test-method signature="adsBlocksUsingExtensions()[pri:0, instance:adsBlock.adsBlockSelenium@5d0bf09b]" started-at="2023-07-05T02:34:40 IST" name="adsBlocksUsingExtensions" finished-at="2023-07-05T02:35:25 IST" duration-ms="44850" status="PASS">
+    <test started-at="2024-03-06T01:35:16 IST" name="Default test" finished-at="2024-03-06T01:35:36 IST" duration-ms="19903">
+      <class name="randomTest.scrollToViewTest">
+        <test-method signature="testScrollView()[pri:0, instance:randomTest.scrollToViewTest@5c90e579]" started-at="2024-03-06T01:35:16 IST" name="testScrollView" finished-at="2024-03-06T01:35:36 IST" duration-ms="19865" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- adsBlocksUsingExtensions -->
-      </class> <!-- adsBlock.adsBlockSelenium -->
+        </test-method> <!-- testScrollView -->
+      </class> <!-- randomTest.scrollToViewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

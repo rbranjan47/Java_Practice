@@ -30,5 +30,22 @@ public class appendReplacementANDTail {
 
 		// final texts are:
 		System.out.println(sb.toString());
+		
+		//1 more Example
+		String newWord = "Hey this , learning Java Programming and cSharp!";
+		String replaceNewWord = "cSharp";
+		String replacementNewWord = "Javascript";
+		
+		Pattern ps = Pattern.compile(replaceNewWord);
+		Matcher mtch = ps.matcher(newWord);
+		
+		
+		StringBuffer sbfr = new StringBuffer();
+		while(mtch.find()) {
+			mtch.appendReplacement(sbfr, replacementNewWord);
+		}
+		
+		mtch.appendTail(sbfr);
+		System.out.println(sbfr.toString());
 	}
 }

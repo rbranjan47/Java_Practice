@@ -3,14 +3,23 @@ package extraConcept;
 import java.util.Arrays;
 
 public class arrayConcept {
+
+	public static String getType(Object obj) {
+		return obj.getClass().getName();
+	}
+
 	public static void main(String[] args) {
 		String value = "Tax $25";
-		String dollarStringAmount = value.substring(5, 7);
+
+		String dollarStringAmount = value.substring(5, 7); //return part of string, from 5th Position to (7-1)th Position
+		System.out.println(dollarStringAmount + " and type is " + getType(dollarStringAmount)); // string
+
+		
 		int dollarIntAmount = Integer.parseInt(dollarStringAmount);
+		System.out.println(dollarIntAmount + " and type is " + getType(dollarIntAmount));
 
-		System.out.println(dollarIntAmount);
-
-		String newValue = value.strip();
+		
+		String newValue = value.strip();  //removes white spaces just like we do from trim() method
 		System.out.println(newValue);
 
 		// Splitting an array

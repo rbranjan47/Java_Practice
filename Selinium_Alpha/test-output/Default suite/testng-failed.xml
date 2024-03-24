@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="adsBlock.adsBlockSelenium">
+      <class name="randomTest.testLocaters">
         <methods>
-          <include name="adsBlocksUsingExtensions"/>
+          <include name="testLocatersMain"/>
         </methods>
-      </class> <!-- adsBlock.adsBlockSelenium -->
+      </class> <!-- randomTest.testLocaters -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

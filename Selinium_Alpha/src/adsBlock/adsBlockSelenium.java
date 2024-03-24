@@ -1,11 +1,15 @@
 package adsBlock;
 
 import java.io.File;
+import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.manager.SeleniumManager;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class adsBlockSelenium {
@@ -22,6 +26,10 @@ public class adsBlockSelenium {
 		WebDriver driver = new ChromeDriver(co);
 		driver.manage().window().maximize();
 		driver.get("https://www.javatpoint.com/java-tutorial");
+		
+		
+		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(20000));
+		Alert alerts = waits.until(ExpectedConditions.alertIsPresent());
 		
 		Thread.sleep(20000);
 		driver.quit();

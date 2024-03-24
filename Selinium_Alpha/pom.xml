@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Selinium_Alpha</groupId>
 	<artifactId>Selinium_Alpha</artifactId>
@@ -15,20 +17,22 @@
 
 	<dependencies>
 
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.8.1</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<!--
+		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>4.4.3</version>
+			<version>5.7.0</version>
 		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
@@ -94,7 +98,8 @@
 			<version>0.1.4.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.github.supersnager/request-response-pattern -->
+		<!--
+		https://mvnrepository.com/artifact/io.github.supersnager/request-response-pattern -->
 		<dependency>
 			<groupId>io.github.supersnager</groupId>
 			<artifactId>request-response-pattern_2.13</artifactId>
@@ -102,6 +107,11 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>Selenium</groupId>
+			<artifactId>Selenium_Maven</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
