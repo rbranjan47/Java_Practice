@@ -4,7 +4,7 @@
  *So, we can write many and each times.
  *
  *We can Pass the data from excel file, then we use methods name here.
-*/
+ */
 package TestNG;
 
 import java.util.concurrent.TimeUnit;
@@ -18,41 +18,41 @@ import org.testng.annotations.Test;
 
 public class Data_Annotations {
 
-	WebDriver driver;
+    WebDriver driver;
 
-	@BeforeMethod
-	public void first() {
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.get("https://google.com");
+    @BeforeMethod
+    public void first() {
+        System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+        driver.manage().deleteAllCookies();
+        driver.manage().window().maximize();
+        driver.get("https://google.com");
 
-		driver.get("https://www.ebay.com/");
-	}
+        driver.get("https://www.ebay.com/");
+    }
 
-	@Test
-	public void testing() throws InterruptedException {
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Mobile Phone");
-		driver.findElement(By.xpath("//input[@type='submit']")).click();
+    @Test
+    public void testing() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Mobile Phone");
+        driver.findElement(By.xpath("//input[@type='submit']")).click();
 
-		Thread.sleep(2000);
+        Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//input[@aria-label='Samsung']")).click();
-		// System.out.println(driver.findElement(By.xpath("//h3[contains
-		// (text(),'Samsung Galaxy S7 Edge G935 32GB GSM Unlocked Android Smartphone
-		// AT&T T-Mobile')]/../../div[3]/div[1]/span")).getText());
+        driver.findElement(By.xpath("//input[@aria-label='Samsung']")).click();
+        // System.out.println(driver.findElement(By.xpath("//h3[contains
+        // (text(),'Samsung Galaxy S7 Edge G935 32GB GSM Unlocked Android Smartphone
+        // AT&T T-Mobile')]/../../div[3]/div[1]/span")).getText());
 
-		String price = driver.findElement(By.xpath("//span[@class='s-item__price']/../../../../div[2]/div[3]/div[1]"))
-				.getText();
-		System.out.println(price);
+        String price = driver.findElement(By.xpath("//span[@class='s-item__price']/../../../../div[2]/div[3]/div[1]"))
+                .getText();
+        System.out.println(price);
 
-	}
+    }
 
-	@AfterMethod
-	public void second() {
-		driver.quit();
-	}
+    @AfterMethod
+    public void second() {
+        driver.quit();
+    }
 }

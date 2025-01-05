@@ -1,0 +1,67 @@
+> Introduction to Advanced Java
+   >> Steps for Develop JDBC Application:
+    1. Load and Register Driver
+    2. Establish Connection between java application and database
+    3. Creation of Statement Object
+    4. Send and Execute SQL Query
+    5. Process Result from Resultset
+    6. Close Connection
+    
+    
+> JDBC in Single way
+> Strorage Areas
+> Introduction to JDBC
+     >> Features:
+       1. Database Independent Technology
+       2. Platform Independent Technology
+       3. Able to perform all Database operations
+       
+> JDBC Architecture
+> JDBC API
+> Driver Interface, Driver Class & Driver Software
+> Types of Driver
+> Stabndard steps to Develop JDBC Application
+> Working With type-1 Driver
+> Working with type-2 Driver
+> Working with type-3 Driver   
+> Working with type-4 Driver
+> Working with type-5 Driver
+> Programs for create and Drop tables
+> How to read dynamic input from the keyboard
+> How to form sql queries with the dynamic input
+> Program for badic CRUD operations
+> How to Develop & run JDBC applications with IDEs applications ex. Eclipse
+> Working with mysql database
+> Life cyle of SQL Query executor 
+> Prepared statement
+> Difference between Statement & PreparedStatement
+> SQL Injection Attack
+> Stored Procedure
+> Callable Statement
+> Cursors
+> Functions
+> Statement vs Prepared Statement vs Callable Statement
+> Batch Updates
+> executeQuery vs executeUpdate() vs execute() vs executeBatch()
+> Insert & Retrive Date Values
+> BLOB vs CLOB 
+> Insert & Retreive BLOB Type
+> Insert & Retreive CLOB Type
+> Connectionpooling
+> Working with properties
+> Different ways to get connection Object
+>Transaction management
+> Savepoint
+> Transaction Concurrency
+> MetaData
+   - DatabaseMetaData
+   - ResulrSetMetaData
+   - ParameterMetaData
+
+> JDBC with non-traditional Databases like excel
+
+> ResultSet holdability
+> RowSets vs ResultSets
+> Working with All RowSets
+
+

@@ -1,0 +1,156 @@
+                                              File Handling
+                                              -------------
+** A file is a container that is used to Store various types of information.
+** Data is permanently stored in secondary memory by creating a file with a unique name.
+
+** CRUD operations:
+    a. Creation of a new File
+    b. Opening an existing file
+    c. Reading from file
+    d. Writing to a file
+    e. Moving to a specific location in a file
+    f. Closing a file
+    
+    
+    
+** Various Methods:
+   ----------------
+   1. writeBytes(String s)  -----> writes the string to the file as sequence of bytes
+   2. readLine()  -----> Reads the next line of text from the file
+   3. getFilePointer()  -----> return the current offset in the file
+   4. length()  -----> return the length of the file
+   5. close()  -----> closes this random access file stream and releases any system
+   6. setLength(long newLength)  -----> Sets the length of this file
+   7. seek(long pos)  -----> Sets the file-pointer offset, measured from the beginning, from which rad and write occurs.    
+ 
+** File Opening modes in JAVA:
+------------------------------
+   "r"    open for reading only, IOException when try to write
+   "rw"   open to reading and Writing. 
+   "rws"  open for reading and writing, and also updates to FILE CONTENT or METADATA to be written synchronously 
+   "rwd" same as rws but it not update metadata.
+   
+
+** RandomAccessFile:
+   ----------------
+   
+   File file = new File("filename");
+   RandomAccess raf = new RandomAccessFile(file, mode);
+   
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
+                                                   InputStream
+                                                    -----------
+
+** InputStream class is the superclass of all the io classes i.e. Representing an input stream of bytes.
+
+** A reset() method is invoked which re-positions the Stream to the recently marked positions.
+
+** public abstract class InputStream extends Object implements Closeable.
+
+* Constructor:
+  -----------
+ InputStream()
+
+* Methods:
+  -------
+  a. mark()  -----> Java.io.InputStream.mark(int arg) -----> marks the current postion
+  b. read()  -----> reads the next byte of data from the input stream. Return value range from 0 to 255
+  c. close()  -----> closes the input Stream and Releases the System associated with this Stream to Garbage Collector
+  d. reset()  -----> reposition the input stream to the marked position
+  e. markSupported()  -----> return true if Stream Support mark() and reset() method
+  f. skip()  -----> Skips bytes if Exception occurs
+  
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
+
+                                                       OutputStream
+                                                       ------------  
+                                                   
+** OutputStream abstract classes representing an output stream of bytes.
+** An Output accepts output bytes and send then to some sink.
+
+
+** Constructor:
+  -------------
+     OutputStream()   
+     
+** Methods:
+   --------
+   
+   1. void close()  -----> closes the output stream and releases resources associated with the Stream.
+   2. void flush()  -----> flushes the output stream and forces any buffered output bytes to be written out.
+   3. void write(byte[] b)  -----> writes b.length bytes from specified byte array to this output stream.
+   4. void write(byte[] b, int offSet, int length)  -----> Writes length bytes from the Specified byte array starting offset off to this output stream.
+   5. abstract void write(int b)  -----> Writes the specified byte to this output stream.
+   
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
+                                                     FilterOutputStream
+                                                     ------------------
+
+** FilterInputStream class almost similar like InputStream class in Java,Just overiding the InputStream class methods
+
+** It just filter the Streams from Read() method.
+
+** Constructors:
+  -------------
+
+  protected FilterInputStream(InputStream in) : Creates a filter input stream by assigning the argument in to the field.
+  
+** Methods:
+   -------
+   1. read(byte[] buffer)  -----> reads number of bytes of buffer.length from the filter input stream to the buffer array
+   2. read(byte[] buffer, int offSet, int maxLen)  -----> reads upto maxLen of datafrom FilterInputStream into a buffer.
+   3. avilable()  -----> return NUMBER OF BYTES that read by InputStream
+   4. read()  -----> read next byte of data from the filter input stream. 0 to 255 in between bytes 
+   5. close()  -----> close the filter input Stream and releases the System resources associated with the Stream to Garbage collector.
+   6. mark(int arg)  -----> marks the current postion in FilterInputStream. It sets the Read limit which will marked positions before becomes Invalid.
+   7. skip()  -----> skip and discard the "arg"" bytes from the FilterInputStream
+   8. reset()  -----> invoked by the mark method and repositions FilterInputStream to the marked positions
+   9. markSupported()  -----> test if inputStream supports the mark() and reset() method.
+
+                                                     
+                                                        
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
+                                                     FilterOutputStream
+                                                     ------------------
+
+** FilterOutputStream is the superclass of all classes which filters output streams.
+** The write() method of filterOutputStream class filters the data and write to the underlying Stream.
+
+** Constrcutor:
+  -------------
+      FilterOutputStream(OutputStream dataOut)   : Creates an output stream filter
+      
+** Methods:
+   --------
+   
+   1. void close()  -----> Closes the stream and releases all allocated resources to the Stream
+   2. void flush()  -----> flushes the output stream and no data allowed to written to the Stream.
+   3. void write(int b)  -----> writes specified byte to the output stream
+   4. void write(byte[] buffer)  -----> write arg.length byte to the output stream
+   5. void write(byte[] buffer, int offset, int maxlength)  -----> write max length bytes from the specified buffer starting at offset position to output stream.
+   
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
+                                                      Byte-Array Input Stream
+                                                      -----------------------
+                                                      
+** Java byte-array input stream class contains all the buffers, containing bytes to be read from the input stream.
+** no IO-Exception
+** METHODS CAN BE CALLED EVEN AFTER CLOSING THE STREAMS.
+
+
+** Methods:
+   -------
+   1. mark(int arg)  -----> mark the current position of the input streams. It sets the read limit i.e. maximum number of bytes that can be read before the mark position.
+   2. read()  -----> reads next byte of the data from the input stream. byte return (0 to 255)
+   3. close()  -----> close the input stream and releases system resources associated with the stream to Garbage collector.
+   4. read(byte[] arg, int offSet, int maxlen)  -----> read the buffer bytes starting from the positions "offset" to maxlen
+   5. reset()  -----> Is invoked by mark method. It repositions the input stream to the marked method.
+   6. markSupported()  -----> methods tests if this input stream supports the mark and reset methods. The mark supported method of ByteArrayStream returns true always.
+   7. skip(long arg)  -----> skip args bytes in the input streams.
+   8. avilable()  -----> tells number of bytes from the input stream to be read.
+   
+   
+   
+   

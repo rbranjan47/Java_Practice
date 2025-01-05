@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,8 +16,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class monkeyTesting {
 	@Test
 	public void monkeyTestingRandomClick() throws InterruptedException {
+		ChromeOptions chrmOpt = new ChromeOptions();
+		chrmOpt.addArguments("--remote-allow-origins=*");
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(chrmOpt);
 
 		driver.get("https://amazon.in");
 		driver.manage().window().maximize();

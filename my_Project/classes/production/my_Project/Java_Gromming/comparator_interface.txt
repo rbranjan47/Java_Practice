@@ -1,0 +1,12 @@
+Comparator Interface:
+---------------------
+A comparator interface is used to order the objects of user-defined classes. A comparable operator is capable 
+of comparing two objects of two different classes.
+
+public int compare(Object obj1, Object obj2, Object obj3):
+----------------------------------------------------------------------------------------------------------------
+
+It has 2 methods:
+1. compareTo()
+2. equals()
+----------------------------------------------------------------------------------------------------------------
